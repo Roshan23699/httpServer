@@ -18,5 +18,4 @@ while True:
     msg = client.recv(1024).decode('utf-8')
     dict1 = msg.split()
     print(l1)
-    
     break
