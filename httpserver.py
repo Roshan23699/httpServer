@@ -1,6 +1,7 @@
 
 from socket import *
 import sys
+import os
 
 host = '127.0.0.1'
 server_socket = socket(AF_INET, SOCK_STREAM)
@@ -17,5 +18,15 @@ while True:
     print("on port", addr[1])
     msg = client.recv(1024).decode('utf-8')
     dict1 = msg.split()
-    print(l1)
-    break
+    print(dict1)
+    #check for the request
+    response  = "\n"
+    if dict1[0] == "GET":
+        if dict1[1] == "/" or dict1[1] == "/index.html":
+            dict1[1] = "index.html"
+            if os.path.exists(dict1[1]):
+                requested_file = open(dict1[1], 'r')
+                response += requested_file.read();
+                requested_file.close()
+                client.send(response.encode())
+                client.close()
