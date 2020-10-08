@@ -26,6 +26,16 @@ while True:
             dict1[1] = "index.html"
             if os.path.exists(dict1[1]):
                 requested_file = open(dict1[1], 'r')
+                response += "HTTP/1.1 200 OK\n"
+                response += "Date: Thu, 08 Oct 2020 11:10:22 GMT\n"
+                response += "Server: Apache/2.4.29 (Ubuntu)\n"
+                response += "Last-Modified: Sat, 14 Sep 2019 10:14:08 GMT\n"
+                response += 'ETag: "2aa6-59280a1a3740c"\n'
+                response += "Accept-Ranges: bytes\n"
+                response += "Content-Length: 10918\n"
+                response += "Vary: Accept-Encoding\n"
+                response += "Content-Type: text/html\n\n"
+
                 response += requested_file.read();
                 requested_file.close()
                 client.send(response.encode())
