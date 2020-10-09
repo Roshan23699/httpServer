@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<title>Welcome</title>
+	<style>
+		body {
+			font-family: "Lato", sans-serif;
+		}
+
+		#mySidenav {
+			box-sizing: border-box;
+			font-weight: 400;
+			color: #73879C;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			line-height: 1.471;
+			font-size: 13px;
+			font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+			background: #2A3F54;
+		}
+
+		.sidenav a {
+			color: #73879C;
+		}
+
+		.sidenav {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 60px;
+		}
+
+		.sidenav a {
+			padding: 8px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 25px;
+
+			display: block;
+			transition: 0.3s;
+		}
+
+		.sidenav a:hover {
+			color: #f1f1f1;
+		}
+
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+
+		.headline {
+			color: #73879C;
+			background: #EDEDED;
+			font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 1.471;
+			height: 50px;
+		}
+
+		@media screen and (max-height: 450px) {
+			.sidenav {
+				padding-top: 15px;
+			}
+
+			.sidenav a {
+				font-size: 18px;
+			}
+		}
+
+		.right {
+			margin-top: 20px;
+			border: white solid 2px;
+			padding: 5px;
+			text-align: center;
+			background-color: white;
+			border-radius: 5px;
+		}
+
+		.push a {
+			font-size: 1.65rem;
+			font-weight: bold;
+		}
+
+		.specialclass {
+			font-weight: bold;
+		}
+
+		.specialclass p {
+			margin-top: 20px;
+		}
+		.push :hover {
+			border: 1px  solid #73879C;
+			box-shadow: 0px 0px 4px white inset;
+		}
+	</style>
+</head>
+
+<body style="background: #f1f1f1">
+
+
+
+
+	<div class="container-fluid" style="margin-right:30px;">
+		<div class="row" style="margin-bottom: 20px;">
+			<div class="col-md-3">
+                <div id="mySidenav" class="sidenav">
+                    <div class="push">
+                        <a id="closenav" href="" class="closebtn" onclick="closeNav()">&times;</a>
+                        <h3 style="text-align: center;color: white; margin-top: -20px; margin-bottom: 20px;">Deshi
+                            Kendra, Latur</h3>
+                        <a id="personalInfo" href="personalInfo.html" onclick=personal_info()>Personal Information</a>
+                        <a id="academicReport" href="#" onclick=academic_report()>Academic Report</a>
+                        <a id="videoLecture" href="videolec.html" onclick=video_lecture()>Video Lectures</a>
+                        <a id="feedback" href="feedback.html" onclick=feedback()>Feedback</a>
+                    </div>
+                </div>
+                <span id="opennav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+
+
+
+
+
+
+
+            </div>
+			<div class="col-md-7 specialclass" style="color: #2A3F54;">
+				<h3
+					style="margin-top: 40px;color: #2A3F54; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">
+					Student Info</h3>
+				
+
+
+
+
+
+					<div class="specialclass col-md-7">
+						<span>
+							<div class="col-md-3">
+								<p>Select Class :</p>
+								<select class="form-control" id="sel1">
+		
+									<option> 10</option>
+									<option>9</option>
+									<option>8</option>
+									<option>7</option>
+									<option>6</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<p>Select Term:</p>
+								<select class="form-control" id="sel1">
+									<option>First</option>
+									<option>Second</option>
+								</select>
+							</div>
+						</span>
+					
+						<h3>Unit Test 1</h3>
+						<table class="table table-bordered">
+							
+							<tr>
+								<th>
+									Subject
+								</th>
+								<th>Marks Obtained</th>
+								<th>Maximum Marks</th>
+		
+								
+								
+							</tr>
+							<tr>
+								<th>
+									Mathematics
+								</th>
+								
+		
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									History
+								</th>
+								<td></td>
+								<td></td>
+								
+								
+							</tr>
+							<tr>
+								<th>
+									Geography
+								</th>
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									English
+								</th>
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									Science
+								</th>
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									Sanskrit
+								</th>
+								<td></td>
+								<td></td>
+
+							</tr>
+		
+						</table>
+
+						
+					
+						<h3>Unit Test 2</h3>
+						<table class="table table-bordered">
+							
+							<tr>
+								<th>
+									Subject
+								</th>
+								<th>Marks Obtained</th>
+								<th>Maximum Marks</th>
+		
+								
+								
+							</tr>
+							<tr>
+								<th>
+									Mathematics
+								</th>
+								
+		
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									History
+								</th>
+								<td></td>
+								<td></td>
+								
+								
+							</tr>
+							<tr>
+								<th>
+									Geography
+								</th>
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									English
+								</th>
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									Science
+								</th>
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									Sanskrit
+								</th>
+								<td></td>
+								<td></td>
+
+							</tr>
+		
+						</table>
+
+						<h3>Semister</h3>
+						<table class="table table-bordered">
+							
+							<tr>
+								<th>
+									Subject
+								</th>
+								<th>Marks Obtained</th>
+								<th>Maximum Marks</th>
+		
+								
+								
+							</tr>
+							<tr>
+								<th>
+									Mathematics
+								</th>
+								
+		
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									History
+								</th>
+								<td></td>
+								<td></td>
+								
+								
+							</tr>
+							<tr>
+								<th>
+									Geography
+								</th>
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									English
+								</th>
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									Science
+								</th>
+								<td></td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<th>
+									Sanskrit
+								</th>
+								<td></td>
+								<td></td>
+
+							</tr>
+		
+						</table>
+		
+		
+		
+						<div class="sel" style="margin-bottom: 100px;">
+							<span>
+								<div class="col-md-3">
+									<p>Select Class :</p>
+									<select class="form-control" id="sel1">
+			
+										<option> 10</option>
+										<option>9</option>
+										<option>8</option>
+										<option>7</option>
+										<option>6</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<p>Select Term:</p>
+									<select class="form-control" id="sel1">
+										<option>First</option>
+										<option>Second</option>
+									</select>
+								</div>
+							</span>
+						</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="chart col-md-6">
+						<canvas id="myChart" style="width: 200px; height: 200px;"></canvas>
+						<script>
+						var ctx = document.getElementById('myChart').getContext('2d');
+						var myChart = new Chart(ctx, {
+							type: 'bar',
+							data: {
+								labels: ['You', 'Class Topper', 'School Topper'],
+								datasets: [{
+									label: 'Marks',
+									data: [79, 94, 99],
+									backgroundColor: [
+										'pink',
+										'lightgreen',
+										'lightblue'
+										
+									],
+									borderColor: [
+										'red', 
+										'green', 
+										'blue'
+									],
+									borderWidth: 1, 
+									width: 2
+								}]
+							},
+							options: {
+								scales: {
+									yAxes: [{
+										ticks: {
+											beginAtZero: true
+										}
+									}], 
+									xAxes: [{
+										// Change here
+										barPercentage: 0.5, 
+										
+									}], 
+									
+								}
+							}
+						});
+						</script>
+					</div>
+	
+	
+	
+	
+	
+	
+	
+					<div class="chart col-md-6">
+						<canvas id="myChart2" style="width: 200px; height: 200px;"></canvas>
+						<script>
+						var ctx = document.getElementById('myChart2').getContext('2d');
+						var myChart2 = new Chart(ctx, {
+							type: 'bar',
+							data: {
+								labels: ['You', 'Class Topper', 'School Topper'],
+								datasets: [{
+									label: 'Marks',
+									data: [79, 94, 99],
+									backgroundColor: [
+										'pink',
+										'lightgreen',
+										'lightblue'
+										
+									],
+									borderColor: [
+										'red', 
+										'green', 
+										'blue'
+									],
+									borderWidth: 1, 
+								}]
+							},
+							options: {
+								scales: {
+									yAxes: [{
+										ticks: {
+											beginAtZero: true
+										}
+									}], 
+									xAxes: [{
+										// Change here
+										barPercentage: 0.5, 
+										
+									}], 
+									
+								}
+							}
+						});
+						</script>
+	
+
+
+
+
+
+				
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+			<div class="col-md-2">
+				<div style="margin-top: 49px;">
+					<a href="update.html" style="margin-top: 50px; font-weight: bold">Update Info: </a>
+				</div>
+				<div class="right">
+					<p style="text-align: left; color: #73879C; font-weight: bold;font-size: 1.7rem;" class="m-2">Photo
+					</p>
+					<img src="passport.jpg" class="img-circle" alt="Cinque Terre" width="180" height="180">
+
+					<p style="padding-top: 20px;font-weight: bold;"> Roshan Bangar</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<script>
+        document.getElementById('personalInfo').style = 'color: red';
+        academic_report();
+        if (screen.width > 720) {
+            document.getElementById('opennav').style = 'display: none;';
+            document.getElementById('closenav').style = 'display: none;';
+            document.getElementById('mySidenav').style = 'display: block;width: 250px;';
+
+        }
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        function personal_info() {
+            document.getElementById('personalInfo').style = 'color: red';
+            document.getElementById('academicReport').style = 'color: #73879C;';
+            document.getElementById('videoLecture').style = 'color: #73879C;';
+            document.getElementById('feedback').style = 'color: #73879C;';
+
+
+
+        }
+        function academic_report() {
+            document.getElementById('personalInfo').style = 'color: #73879C;';
+            document.getElementById('academicReport').style = 'color:red;';
+            document.getElementById('videoLecture').style = 'color: #73879C;';
+            document.getElementById('feedback').style = 'color: #73879C;';
+
+
+        }
+        function video_lecture() {
+            document.getElementById('personalInfo').style = 'color: #73879C;';
+            document.getElementById('videoLecture').style = 'color: red;';
+            document.getElementById('academicReport').style = 'color: #73879C;';
+            document.getElementById('feedback').style = 'color: #73879C;';
+
+        }
+        function feedback() {
+            document.getElementById('personalInfo').style = 'color: #73879C';
+            document.getElementById('feedback').style = 'color: red;';
+            document.getElementById('academicReport').style = 'color: #73879C';
+            document.getElementById('videoLecture').style = 'color: #73879C;';
+
+        }
+    </script>
+</body>
+
+</html>

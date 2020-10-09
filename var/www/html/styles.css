@@ -1,0 +1,158 @@
+#notice {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 25px;
+}
+
+#notice td,
+#notice th {
+	border-bottom: 1px solid #ddd;
+	padding: 8px;
+}
+
+#notice tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#notice tr:hover {
+	background-color: #ddd;
+}
+
+#notice	a:link {
+	color:rgb(85, 83, 83);
+}
+
+/* visited link */
+#notice a:visited {
+	color:rgb(85, 83, 83);
+}
+
+/* mouse over link */
+#notice a:hover {
+	color: red;
+}
+
+/* selected link */
+#notice	a:active {
+	color: yellow;
+}
+
+
+
+
+#notice th {
+	margin-top: 2px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #333;
+	color: #fff;
+}
+
+
+
+
+#middle {
+	background: white;
+	border-radius: 10px;
+	border: 2px #f1f1f1 solid;
+	box-shadow: 2px 2px 2px white inset;
+	padding: 20px;
+	;
+	margin-bottom: 10px;
+}
+
+.heading {
+	padding: 2rem 1rem;
+	margin-bottom: 0em;
+	background-color: #e9ecef;
+	border-radius: .3rem;
+}
+
+.w-100 {
+	width: 100% !important;
+	height: 300px;
+}
+
+.nav-item {
+	border-right: #f0f2 1px solid;
+}
+
+
+
+
+#form-inside {
+	border: #f1f1 solid 1px;
+	padding: 10px;
+	padding-bottom: 0px;
+	border-radius: 0px 0px 9px 9px;
+
+}
+
+
+
+
+
+
+.wrapper {
+	background: black;
+	padding-bottom: 20px;
+	color: white;
+
+}
+
+.wrapper a {
+	color: white;
+	text-decoration: solid;
+}
+
+#credits {
+	text-align: center;
+	color: red;
+
+}
+
+#nav1 li {
+	font-weight: bold;
+	font-size: 1.6rem;
+	width: 204px;
+}
+
+#nav2 li {
+	font-weight: bold;
+	font-size: 1.6rem;
+	width: 174px;
+}
+
+#nogap {
+	margin-bottom: 0px;
+	border-radius: 9px 9px 0px 0px;
+	margin-top: 0px;
+	padding: 5px;
+
+}
+
+.box-1 {
+	border: 1px #c1c1c1 solid;
+	padding: 1rem;
+	width: 245px;
+	margin: 2rem 1rem -1rem 0rem;
+	background: #f1f1f1;
+	box-shadow: 10px black inset;
+	border-radius: 9px;
+
+	text-align: center;
+}
+
+.active {
+	color: red;
+}
+
+marquee {
+	font-weight: bold;
+	text-shadow: 2px red inset;
+	height: 30px;
+	font-size: 2rem;
+}
+

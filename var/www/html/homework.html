@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+
+        #vtable {
+            background-color: white;
+            padding-top: 40px;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 125px;
+        }
+
+        #vtable th {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+        }
+
+        #vtable td {
+            padding: 10px;
+
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+        }
+
+
+        #mySidenav {
+            box-sizing: border-box;
+            font-weight: 400;
+            color: #73879C;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            line-height: 1.471;
+            font-size: 13px;
+            font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+            background: #2A3F54;
+        }
+
+        .sidenav a {
+            color: #73879C;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .headline {
+            color: #73879C;
+            background: #EDEDED;
+            font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.471;
+            height: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .right {
+            margin-top: 20px;
+            border: white solid 2px;
+            padding: 5px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .push a {
+            font-size: 1.65rem;
+            font-weight: bold;
+        }
+
+        .specialclass {
+            font-weight: bold;
+        }
+
+        .specialclass p {
+            margin-top: 20px;
+        }
+
+        .rowh {
+            background-color: rgb(180, 235, 99);
+        }
+
+
+        .rowh h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding-left: 20px;
+            padding-top: 15px;
+            text-align: left;
+
+
+        }
+
+        .rowh h5 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+
+            padding-right: 20px;
+
+            text-align: right;
+        }
+
+        .rowh h4 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding-left: 15px;
+            padding-top: 20px;
+            padding-bottom: 0px;
+            padding-right: 10%;
+
+        }
+
+        .rowh p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            padding-left: 15px;
+            padding-top: 0px;
+            padding-bottom: 20px;
+            padding-right: 20%;
+
+        }
+    </style>
+</head>
+
+<body style="background: #f1f1f1">
+
+
+
+
+    <div class="container-fluid" style="margin-right:30px;">
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3">
+                <div id="mySidenav" class="sidenav">
+                    <div class="push">
+                        <a id="closenav" href="" class="closebtn" onclick="closeNav()">&times;</a>
+                        <h3 style="text-align: center;color: white; margin-top: -20px; margin-bottom: 20px;">Deshi
+                            Kendra, Latur</h3>
+                        <a id="Homework" href="homework.html" onclick=Homework()>Homework</a>
+                        <a id="personalInfo" href="personalInfo.html" onclick=personal_info()>Personal Information</a>
+                        <a id="academicReport" href="report.html" onclick=academic_report()>Academic Report</a>
+                        <a id="videoLecture" href="videolec.html" onclick=video_lecture()>Video Lectures</a>
+                        <a id="feedback" href="feedback.html" onclick=feedback()>Feedback</a>
+                    </div>
+                </div>
+                <span id="opennav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="specialclass col-md-9">
+                <center>
+                    <h1 style="font-family: Arial, Helvetica, sans-serif;font-weight: bolder;">
+                        Homework
+                    </h1>
+                </center>
+
+                <div class="rowh ">
+
+
+                    <h3>
+
+                        History
+
+                    </h3>
+
+                    <h5>
+                        Date :5/6/2019
+
+                    </h5>
+                    <h5>
+                        Time : 8.20 pm
+
+                    </h5>
+                    <h4>
+                        Bring Homework notebook writing chapter 5 questions and answers
+
+                    </h4>
+                    <p>
+                        Do subquestions 1,2 , 5 of 1st question . Do all subquestions questions of Q.2 except last one .
+                        Do all remaining Q.3 to Q.5 whole .
+
+                    </p>
+
+
+
+                </div>
+
+                <div class="rowh ">
+
+                    <span>
+                        <h3>
+
+                            History
+
+                        </h3>
+
+                        <h5>
+                            Date :5/6/2019
+
+                        </h5>
+                        <h5>
+                            Time : 8.20 pm
+
+                        </h5>
+                    </span>
+                    <h4>
+                        Bring Homework notebook writing chapter 5 questions and answers
+
+                    </h4>
+                    <p>
+                        Do subquestions 1,2 , 5 of 1st question . Do all subquestions questions of Q.2 except last one .
+                        Do all remaining Q.3 to Q.5 whole .
+
+                    </p>
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        document.getElementById('personalInfo').style = 'color: red';
+        Homework();
+        if (screen.width > 720) {
+            document.getElementById('opennav').style = 'display: none;';
+            document.getElementById('closenav').style = 'display: none;';
+            document.getElementById('mySidenav').style = 'display: block;width: 250px;';
+
+        }
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function Homework() {
+			document.getElementById('Homework').style = 'color: red;';
+			document.getElementById('personalInfo').style = 'color: #73879C;';
+			document.getElementById('academicReport').style = 'color: #73879C;';
+			document.getElementById('videoLecture').style = 'color: #73879C;';
+			document.getElementById('feedback').style = 'color: #73879C;';
+
+
+
+		}
+		function personal_info() {
+			document.getElementById('Homework').style = 'color: #73879C;';
+			document.getElementById('personalInfo').style = 'color: red';
+			document.getElementById('academicReport').style = 'color: #73879C;';
+			document.getElementById('videoLecture').style = 'color: #73879C;';
+			document.getElementById('feedback').style = 'color: #73879C;';
+
+
+
+		}
+		function academic_report() { 
+			if(screen.width > 720) {
+				window.open('report.html', '_self');
+			}
+			else {
+				window.open('academicreportmobile.html', '_self');
+			}
+			document.getElementById('Homework').style = 'color: #73879C;';
+			document.getElementById('personalInfo').style = 'color: #73879C;';
+			document.getElementById('academicReport').style = 'color:red;';
+			document.getElementById('videoLecture').style = 'color: #73879C;';
+			document.getElementById('feedback').style = 'color: #73879C;';
+
+
+		}
+		function video_lecture() {
+			document.getElementById('Homework').style = 'color: #73879C;';
+			document.getElementById('personalInfo').style = 'color: #73879C;';
+			document.getElementById('videoLecture').style = 'color: red;';
+			document.getElementById('academicReport').style = 'color: #73879C;';
+			document.getElementById('feedback').style = 'color: #73879C;';
+
+		}
+		function feedback() {
+			document.getElementById('Homework').style = 'color: #73879C;';
+			document.getElementById('personalInfo').style = 'color: #73879C';
+			document.getElementById('feedback').style = 'color: red;';
+			document.getElementById('academicReport').style = 'color: #73879C';
+			document.getElementById('videoLecture').style = 'color: #73879C;';
+
+		}
+
+
+    </script>
+</body>
+
+</html>
