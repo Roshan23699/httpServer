@@ -41,7 +41,8 @@ while True:
                 response += ("last-Modified: " + datetime.datetime.fromtimestamp(last_modified).strftime("%A, %d %b, %Y %I:%M:%S")+ " GMT\n")
                 response += 'ETag: "2aa6-59280a1a3740c"\n'
                 response += "Accept-Ranges: bytes\n"
-                response += "Content-Length: 10918\n"
+                content_length = os.path.getsize(dict1[1])
+                response += "Content-Length: " + str(content_length) + "\n"
                 response += "Vary: Accept-Encoding\n"
                 response += "Content-Type: text/html\n\n"
 
@@ -54,7 +55,8 @@ while True:
                 curr_time = datetime.datetime.now()
                 response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
                 response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
-                response += "Content-Length: 330\n"
+                content_length = os.path.getsize(dict1[1])
+                response += "Content-Length: " + content_length + "\n"
                 response += "Connection: close\n"
                 response += "Content-Type: text/html; charset=iso-8859-1\n\n"
                 dict1[1] = ROOT
