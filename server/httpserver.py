@@ -4,7 +4,7 @@ import os
 import datetime
 
 #Global Section
-ROOT = "../var/www/html/"
+ROOT = "../var/www/html"
 
 host = '127.0.0.1'
 server_socket = socket(AF_INET, SOCK_STREAM)
@@ -26,45 +26,50 @@ while True:
     #check for the request
     response  = "\n"
     if dict1[0] == "GET":
-        if dict1[1] == "/" or dict1[1] == "/index.html":
-            dict1[1] = ROOT
+        if dict1[1] == "/":
             dict1[1] += "index.html"
+        print(dict1[1])
+        temp = dict1[1]
+        dict1[1] = ROOT
+        dict1[1] += temp
+        print(dict1)
+        
 
-            if os.path.exists(dict1[1]):
-                requested_file = open(dict1[1], 'r')
-                response += "HTTP/1.1 200 OK\n"
-                curr_time = datetime.datetime.now()
-                response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
-                response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
-                last_modified = os.path.getmtime(dict1[1])
-                #response += ("Last-Modified: " + last_modified.strftime("%A") + ", " + last_modified.strftime("%d") +  " " + last_modified.strftime("%b") + " " + last_modified.strftime("%Y") + " " + last_modified.strftime("%X") +  " GMT\n")
-                response += ("last-Modified: " + datetime.datetime.fromtimestamp(last_modified).strftime("%A, %d %b, %Y %I:%M:%S")+ " GMT\n")
-                response += 'ETag: "2aa6-59280a1a3740c"\n'
-                response += "Accept-Ranges: bytes\n"
-                content_length = os.path.getsize(dict1[1])
-                response += "Content-Length: " + str(content_length) + "\n"
-                response += "Vary: Accept-Encoding\n"
-                response += "Content-Type: text/html\n\n"
+        if os.path.exists(dict1[1]):
+            requested_file = open(dict1[1], 'r')
+            response += "HTTP/1.1 200 OK\n"
+            curr_time = datetime.datetime.now()
+            response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
+            response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
+            last_modified = os.path.getmtime(dict1[1])
+            #response += ("Last-Modified: " + last_modified.strftime("%A") + ", " + last_modified.strftime("%d") +  " " + last_modified.strftime("%b") + " " + last_modified.strftime("%Y") + " " + last_modified.strftime("%X") +  " GMT\n")
+            response += ("last-Modified: " + datetime.datetime.fromtimestamp(last_modified).strftime("%A, %d %b, %Y %I:%M:%S")+ " GMT\n")
+            response += 'ETag: "2aa6-59280a1a3740c"\n'
+            response += "Accept-Ranges: bytes\n"
+            content_length = os.path.getsize(dict1[1])
+            response += "Content-Length: " + str(content_length) + "\n"
+            response += "Vary: Accept-Encoding\n"
+            response += "Content-Type: text/html\n\n"
 
-                response += requested_file.read();
-                requested_file.close()
-                client.send(response.encode())
-                client.close()
-            else :
-                response += "HTTP/1.1 400 Bad Request\n"
-                curr_time = datetime.datetime.now()
-                response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
-                response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
-                content_length = os.path.getsize(dict1[1])
-                response += "Content-Length: " + content_length + "\n"
-                response += "Connection: close\n"
-                response += "Content-Type: text/html; charset=iso-8859-1\n\n"
-                dict1[1] = ROOT
-                dict1[1] += "error/error.html"
-                requested_file = open(dict1[1], 'r')
-                response += requested_file.read();
-                requested_file.close()
-                client.send(response.encode())
-                client.close()
-
-
+            response += requested_file.read();
+            requested_file.close()
+            client.send(response.encode())
+            client.close()
+        else :
+            dict1[1] = ROOT
+            dict1[1] += "/error/error.html"
+            response += "HTTP/1.1 400 Bad Request\n"
+            curr_time = datetime.datetime.now()
+            response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
+            response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
+            content_length = os.path.getsize(dict1[1])
+            response += "Content-Length: " + content_length + "\n"
+            response += "Connection: close\n"
+            response += "Content-Type: text/html; charset=iso-8859-1\n\n"
+            dict1[1] = ROOT
+            dict1[1] += "error/error.html"
+            requested_file = open(dict1[1], 'r')
+            response += requested_file.read();
+            requested_file.close()
+            client.send(response.encode())
+            client.close()
