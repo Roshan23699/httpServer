@@ -29,8 +29,10 @@ while True:
                 response += "HTTP/1.1 200 OK\n"
                 curr_time = datetime.datetime.now()
                 response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
-                response += "Server: Apache/2.4.29 (Ubuntu)\n"
-                response += "Last-Modified: Sat, 14 Sep 2019 10:14:08 GMT\n"
+                response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
+                last_modified = os.path.getmtime(dict1[1])
+                #response += ("Last-Modified: " + last_modified.strftime("%A") + ", " + last_modified.strftime("%d") +  " " + last_modified.strftime("%b") + " " + last_modified.strftime("%Y") + " " + last_modified.strftime("%X") +  " GMT\n")
+                response += ("last-Modified: " + datetime.datetime.fromtimestamp(last_modified).strftime("%A, %d %b, %Y %I:%M:%S")+ " GMT\n")
                 response += 'ETag: "2aa6-59280a1a3740c"\n'
                 response += "Accept-Ranges: bytes\n"
                 response += "Content-Length: 10918\n"
