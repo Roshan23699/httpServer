@@ -3,7 +3,6 @@ import sys
 import os
 import datetime
 from request_GET import request_GET
-from support_functions import *
 
 #Global Section
 ROOT = "../var/www/html"
