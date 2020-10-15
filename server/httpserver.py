@@ -2,74 +2,38 @@ from socket import *
 import sys
 import os
 import datetime
+from request_GET import request_GET
+from support_functions import *
 
 #Global Section
 ROOT = "../var/www/html"
 
-host = '127.0.0.1'
-server_socket = socket(AF_INET, SOCK_STREAM)
-server_socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
-port = int(sys.argv[1])
-server_socket.bind(('', port))
-server_socket.listen(2)
-print("Server is ready to listen")
 
 
 
-while True:
-    client, addr = server_socket.accept()
-    print("connection has recieved from ip", addr[0])
-    print("on port", addr[1])
-    msg = client.recv(1024).decode('utf-8')
-    dict1 = msg.split()
-    print(dict1)
-    #check for the request
-    response  = "\n"
-    if dict1[0] == "GET":
-        if dict1[1] == "/":
-            dict1[1] += "index.html"
-        print(dict1[1])
-        temp = dict1[1]
-        dict1[1] = ROOT
-        dict1[1] += temp
+if __name__ == "__main__":
+    host = '127.0.0.1'
+    server_socket = socket(AF_INET, SOCK_STREAM)
+    server_socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+    port = int(sys.argv[1])
+    server_socket.bind(('', port))
+    server_socket.listen(2)
+    print("Server is ready to listen")
+
+
+
+    while True:
+        client, addr = server_socket.accept()
+        print("connection has recieved from ip", addr[0])
+        print("on port", addr[1])
+        msg = client.recv(1024).decode('utf-8')
+        #while not (msg[len(msg) - 2] == '\n' and msg[len(msg) - 1] == '\n'):
+            #msg += client.recv(1024).decode('utf-8')
+            #print(msg)
+        dict1 = msg.split()
+        if len(dict1) == 0:
+            continue
         print(dict1)
-        
-
-        if os.path.exists(dict1[1]):
-            requested_file = open(dict1[1], 'r')
-            response += "HTTP/1.1 200 OK\n"
-            curr_time = datetime.datetime.now()
-            response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
-            response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
-            last_modified = os.path.getmtime(dict1[1])
-            #response += ("Last-Modified: " + last_modified.strftime("%A") + ", " + last_modified.strftime("%d") +  " " + last_modified.strftime("%b") + " " + last_modified.strftime("%Y") + " " + last_modified.strftime("%X") +  " GMT\n")
-            response += ("last-Modified: " + datetime.datetime.fromtimestamp(last_modified).strftime("%A, %d %b, %Y %I:%M:%S")+ " GMT\n")
-            response += 'ETag: "2aa6-59280a1a3740c"\n'
-            response += "Accept-Ranges: bytes\n"
-            content_length = os.path.getsize(dict1[1])
-            response += "Content-Length: " + str(content_length) + "\n"
-            response += "Vary: Accept-Encoding\n"
-            response += "Content-Type: text/html\n\n"
-
-            response += requested_file.read();
-            requested_file.close()
-            client.send(response.encode())
-            client.close()
-        else :
-            dict1[1] = ROOT
-            dict1[1] += "/error/error.html"
-            response += "HTTP/1.1 400 Bad Request\n"
-            curr_time = datetime.datetime.now()
-            response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
-            response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
-            content_length = os.path.getsize(dict1[1])
-            response += "Content-Length: " + content_length + "\n"
-            response += "Connection: close\n"
-            response += "Content-Type: text/html; charset=iso-8859-1\n\n"
-            dict1[1] = ROOT
-            dict1[1] += "error/error.html"
-            requested_file = open(dict1[1], 'r')
-            response += requested_file.read();
-            requested_file.close()
-            client.send(response.encode())
-            client.close()
+        #check for the request
+        if dict1[0] == "GET":
+            request_GET(dict1, client, addr, ROOT)
