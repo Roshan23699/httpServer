@@ -3,6 +3,7 @@ import sys
 import os
 import datetime
 from support_functions import *
+from threading import Thread
 def request_GET(dict1, client, addr, ROOT):
             response = "\n"
             if dict1[1] == "/":
