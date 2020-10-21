@@ -5,6 +5,7 @@ import datetime
 from request_GET import request_GET
 from support_functions import *
 from request_HEAD import request_HEAD
+from request_POST import *
 
 #Global Section
 ROOT = "../var/www/html"
@@ -40,3 +41,5 @@ if __name__ == "__main__":
             request_GET(dict1, client, addr, ROOT)
         elif dict1[0] == "HEAD":
             request_HEAD(dict1, client, addr, ROOT)
+        elif dict1[0] == "POST":
+            request_POST(dict1, client, addr, ROOT, msg)

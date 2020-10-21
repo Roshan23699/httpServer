@@ -2,6 +2,10 @@ from socket import *
 import sys
 import os
 import datetime
+#function to find the msg body of the request or even response if needed
+def find_body(msg):
+    msg.split('\n\n')
+    return msg[1]
 #function to check headers and finding their values
 def find_value(x, y):
     #x is the attribute of which value is to be found
