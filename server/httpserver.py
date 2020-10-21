@@ -3,8 +3,10 @@ import sys
 import os
 import datetime
 from request_GET import request_GET
-from request_POST import request_POST
 from support_functions import *
+from request_HEAD import request_HEAD
+from request_POST import *
+
 import threading
 import time
 import re
@@ -15,7 +17,7 @@ def response(client, addr, ROOT):
     requests = []
     msg = client.recv(1024).decode('utf-8')
     requests.append(msg)
-    request(client, addr, ROOT, requests)
+    request(client, addr, ROOT, requests, msg)
     return
         # if msg == '\r\n':
         #     #print("hi")
@@ -43,10 +45,16 @@ def timeout(client, addr, ROOT):
         client.close()
 
 
-def request(client, addr, ROOT, requests):
+def request(client, addr, ROOT, requests, msg):
     dict1 = requests[0].split()
+    if(len(dict1) == 0):
+        return
     if dict1[0] == "GET":
         request_GET(dict1, client, addr, ROOT)
+    elif dict1[0] == "POST":
+        request_POST(dict1, client, addr, ROOT, msg)
+    elif dict1[0] == "HEAD":
+        request_HEAD(dict1, client, addr, ROOT)
 if __name__ == "__main__":
     host = '127.0.0.1'
     server_socket = socket(AF_INET, SOCK_STREAM)

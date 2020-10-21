@@ -3,11 +3,10 @@ import sys
 import os
 import datetime
 from support_functions import *
-from threading import Thread
-def request_GET(dict1, client, addr, ROOT):
+def request_HEAD(dict1, client, addr, ROOT):
             response = "\n"
             if dict1[1][len(dict1[1]) - 1] == "/":
-                   dict1[1] += "index.html"
+                dict1[1] += "index.html"
             #print(dict1[1kjfklal])
             #check the extention of the file to be sent
             content_type = check_extention(dict1[1])
@@ -37,7 +36,7 @@ def request_GET(dict1, client, addr, ROOT):
                 response += "Content-Type: " + content_type + "\n\n"
                 #response += requested_file.read();
                 response = response.encode()
-                response += read_file(dict1[1], content_type)
+                #response += read_file(dict1[1], content_type)
                 #requested_file.close()#no need of this statement any more
                 client.send(response)
                 if find_value("Connection:", dict1) != "keep-alive":
@@ -54,7 +53,7 @@ def request_GET(dict1, client, addr, ROOT):
                 #response += "Connection: close\n"
                 response += "Content-Type: text/html; charset=iso-8859-1\n\n"
                 response  = response.encode()
-                response += read_file(dict1[1], content_type)
+                #response += read_file(dict1[1], content_type)
                 client.send(response)
                 if find_value("Connection:", dict1) != "keep-alive":
                     client.close()
@@ -72,7 +71,7 @@ def request_GET(dict1, client, addr, ROOT):
                 #response += "Connection: close\n"
                 response += "Content-Type: text/html; charset=iso-8859-1\n\n"
                 response  = response.encode()
-                response += read_file(dict1[1], content_type)
+                #response += read_file(dict1[1], content_type)
                 client.send(response)
                 if find_value("Connection:", dict1) != "keep-alive":
                     client.close()
