@@ -34,14 +34,18 @@ def request_GET(dict1, client, addr, ROOT):
                 #fall through
                 if content_type == None:
                     content_type = "text/html"
-                response += "Content-Type: " + content_type + "\n\n"
-                #response += requested_file.read();
-                response = response.encode()
+                # print(find_value("Connection:", dict1))
+                response += "Content-Type: " + content_type + "\n"
+                if find_value("Connection:", dict1) == "Keep-Alive" or find_value("Connection:", dict1) == "keep-alive":
+                    response += "keep-alive: timeout=5, max=100\nConnection: Keep-Alive\n\n"
+                else :
+                    response += "\n"
+                response  = response.encode()
                 response += read_file(dict1[1], content_type)
-                #requested_file.close()#no need of this statement any more
                 client.send(response)
-                if find_value("Connection:", dict1) != "keep-alive":
-                    client.close()
+                if find_value("Connection:", dict1) != "Keep-Alive" and find_value("Connection:", dict1) != "keep-alive":
+                    client.close()  
+                
             else :
                 dict1[1] = ROOT
                 dict1[1] += "/error/notfound.html"
@@ -52,12 +56,18 @@ def request_GET(dict1, client, addr, ROOT):
                 content_length = os.path.getsize(dict1[1])
                 response += "Content-Length: " + str(content_length) + "\n"
                 #response += "Connection: close\n"
-                response += "Content-Type: text/html; charset=iso-8859-1\n\n"
+                response += "Content-Type: text/html; charset=iso-8859-1\n"
+                print(find_value("Connection:", dict1))
+                if find_value("Connection:", dict1) == "Keep-Alive" or find_value("Connection:", dict1) == "keep-alive":
+                    response += "keep-alive: timeout=5, max=100\nConnection: Keep-Alive\n\n"
+                else :
+                    response += "\n"
                 response  = response.encode()
                 response += read_file(dict1[1], content_type)
                 client.send(response)
-                if find_value("Connection:", dict1) != "keep-alive":
-                    client.close()
+                if find_value("Connection:", dict1) != "Keep-Alive" and find_value("Connection:", dict1) != "keep-alive":
+                    client.close()  
+                #still to check for the max timeout and close the connection remaining
 
             #fall through
             if False :
