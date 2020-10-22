@@ -16,7 +16,7 @@ def find_value(x, y):
             return val
         if val == x:
             t = True
-        return None
+    return None
 
 
 #function to return the extention of the file

@@ -5,6 +5,7 @@ import datetime
 from request_GET import request_GET
 from support_functions import *
 from request_HEAD import request_HEAD
+from request_DELETE import request_DEL
 from request_POST import *
 
 import threading
@@ -55,6 +56,9 @@ def request(client, addr, ROOT, requests, msg):
         request_POST(dict1, client, addr, ROOT, msg)
     elif dict1[0] == "HEAD":
         request_HEAD(dict1, client, addr, ROOT)
+    elif dict1[0] == "DELETE":
+        request_DEL(dict1,client, addr,ROOT)
+        
 if __name__ == "__main__":
     host = '127.0.0.1'
     server_socket = socket(AF_INET, SOCK_STREAM)
