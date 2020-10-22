@@ -7,6 +7,7 @@ from support_functions import *
 from request_HEAD import request_HEAD
 from request_DELETE import request_DEL
 from request_POST import *
+from status_5XX import *
 
 import threading
 import time
@@ -58,6 +59,10 @@ def request(client, addr, ROOT, requests, msg):
         request_HEAD(dict1, client, addr, ROOT)
     elif dict1[0] == "DELETE":
         request_DEL(dict1,client, addr,ROOT)
+    elif dict1[0] == "PUT":
+        request_PUT(dict1, client, addr, ROOT)
+    else:
+        not_implemented(dict1, client, addr, ROOT)
         
 if __name__ == "__main__":
     host = '127.0.0.1'
