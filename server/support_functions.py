@@ -2,6 +2,7 @@ from socket import *
 import sys
 import os
 import datetime
+import mimetypes
 #function to find the msg body of the request or even response if needed
 def find_body(msg):
     msg.split('\n\n')
@@ -21,14 +22,7 @@ def find_value(x, y):
 
 #function to return the extention of the file
 def check_extention(x):
-    #if x == html return text/html
-    t = x.split(".")
-    if t[1] == "html" or t[1] == "htm" :
-        return "text/html"
-    elif t[1] == "png" or t[1] == "jpg" or t[1] == "jpeg" or t[1] == "gif":
-        return "image/" + t[1]
-    else :
-        return "text/html"
+    return mimetypes.guess_type(x)[0]
 
 def read_file(f, type_of_file):
     #f is the file to be read
