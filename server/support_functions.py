@@ -27,13 +27,6 @@ def check_extention(x):
 def read_file(f, type_of_file):
     #f is the file to be read
     #type_of_file is the extention of file
-    type_of_file = type_of_file.split("/")[0]
-    if type_of_file == "text":
-        requested_file = open(f,  'r')
-        content = requested_file.read()
-        requested_file.close()
-        return  content.encode()
-    elif type_of_file == "image":
         content = b""
         with open(f, "rb") as f:
             byte = f.read(1)
@@ -42,7 +35,3 @@ def read_file(f, type_of_file):
                 content += byte
                 byte = f.read(1)
         return content
-    else :
-        raise argparse.ArgumentTypeError(
-                'Not a text file! Argument filename must be of type *.txt')
-
