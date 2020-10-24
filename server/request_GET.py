@@ -6,8 +6,9 @@ from support_functions import *
 from threading import Thread
 from authorization import CHECK_AUTH, authorize
 from status_4XX import *
+from request_conditional import *
 def request_GET(dict1, client, addr, ROOT):
-            response = "\n"
+            response = ""
             if dict1[1][len(dict1[1]) - 1] == "/":
                    dict1[1] += "index.html"
             #print(dict1[1kjfklal])
@@ -23,14 +24,19 @@ def request_GET(dict1, client, addr, ROOT):
                     #return 401 Unauthorized
                     unauthorized(dict1, client, addr, ROOT)
                 else :
-                    response += "HTTP/1.1 200 OK\n"
+                    if conditional_check(dict1):
+                        response += "HTTP/1.1 304 Not Modified\n"
+                    else :
+                        response += "HTTP/1.1 200 OK\n"
                     curr_time = datetime.datetime.now()
                     response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
                     response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
+                    
+
                     last_modified = os.path.getmtime(dict1[1])
                     #response += ("Last-Modified: " + last_modified.strftime("%A") + ", " + last_modified.strftime("%d") +  " " + last_modified.strftime("%b") + " " + last_modified.strftime("%Y") + " " + last_modified.strftime("%X") +  " GMT\n")
                     response += ("last-Modified: " + datetime.datetime.fromtimestamp(last_modified).strftime("%A, %d %b, %Y %I:%M:%S")+ " GMT\n")
-                    response += 'ETag: "2aa6-59280a1a3740c"\n'
+                    response += 'ETag: ' + etag(dict1[1]) + '\n'
                     response += "Accept-Ranges: bytes\n"
                     content_length = os.path.getsize(dict1[1])
                     response += "Content-Length: " + str(content_length) + "\n"

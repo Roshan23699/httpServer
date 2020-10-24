@@ -3,6 +3,15 @@ import sys
 import os
 import datetime
 import mimetypes
+import hashlib
+
+def etag(resource) :
+    #find the md5 hash
+    result = hashlib.md5(resource.encode())
+    #return the hex equivalent
+    return result.hexdigest()
+
+
 #function to find the msg body of the request or even response if needed
 def find_body(msg):
     msg.split('\n\n')
