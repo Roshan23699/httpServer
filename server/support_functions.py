@@ -3,10 +3,22 @@ import sys
 import os
 import datetime
 import mimetypes
+<<<<<<< HEAD
 import re
 import email
 from io import StringIO
 import status_5XX 
+=======
+import hashlib
+
+def etag(resource) :
+    #find the md5 hash
+    result = hashlib.md5(resource.encode())
+    #return the hex equivalent
+    return result.hexdigest()
+
+
+>>>>>>> f677cbc0a855b94f8038fb6c0948511f4c659a9b
 #function to find the msg body of the request or even response if needed
 def find_body(msg):
     msg.split('\n\n')
