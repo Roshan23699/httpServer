@@ -8,7 +8,7 @@ from request_HEAD import request_HEAD
 from request_DELETE import request_DEL
 from request_POST import *
 from status_5XX import *
-
+import pprint
 import threading
 import time
 import re
@@ -18,8 +18,20 @@ ROOT = "../var/www/html"
 def response(client, addr, ROOT):
     requests = []
     msg = client.recv(1024).decode('utf-8')
+
     requests.append(msg)
-    request(client, addr, ROOT, requests, msg)
+    headers = check_header(str(msg))
+    if headers:
+        headers['method'] = str(msg).split()[0]
+        headers['request-uri'] = str(msg).split()[1]
+        headers['version'] = str(msg).split()[2]
+        pprint.pprint(headers, width=160)
+    else:
+        headers['method'] = str(msg).split()[0]
+        headers['request-uri'] = str(msg).split()[1]
+        headers['version'] = str(msg).split()[2]
+        pprint.pprint(headers, width=160)
+    request(client, addr, ROOT, headers, msg)
     return
         # if msg == '\r\n':
         #     #print("hi")
@@ -47,22 +59,21 @@ def timeout(client, addr, ROOT):
         client.close()
 
 
-def request(client, addr, ROOT, requests, msg):
-    dict1 = requests[0].split()
-    if(len(dict1) == 0):
+def request(client, addr, ROOT, headers, msg):
+    if(len(headers) == 0):
         return
-    if dict1[0] == "GET":
-        request_GET(dict1, client, addr, ROOT)
-    elif dict1[0] == "POST":
-        request_POST(dict1, client, addr, ROOT, msg)
-    elif dict1[0] == "HEAD":
-        request_HEAD(dict1, client, addr, ROOT)
-    elif dict1[0] == "DELETE":
-        request_DEL(dict1,client, addr,ROOT)
-    elif dict1[0] == "PUT":
-        request_PUT(dict1, client, addr, ROOT)
+    if headers['method'] == "GET":
+        request_GET(headers, client, addr, ROOT)
+    elif headers['method'] == "POST":
+        request_POST(headers1, client, addr, ROOT, msg)
+    elif headers['method'] == "HEAD":
+        request_HEAD(headers1, client, addr, ROOT)
+    elif headers['method'] == "DELETE":
+        request_DEL(headers1,client, addr,ROOT)
+    elif headers['method'] == "PUT":
+        request_PUT(headers1, client, addr, ROOT)
     else:
-        not_implemented(dict1, client, addr, ROOT)
+        not_implemented(headers1, client, addr, ROOT)
         
 if __name__ == "__main__":
     host = '127.0.0.1'
@@ -70,7 +81,7 @@ if __name__ == "__main__":
     server_socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
     port = int(sys.argv[1])
     server_socket.bind(('', port))
-    server_socket.listen(2)
+    server_socket.listen(1)
     print("Server is ready to listen")
 
 

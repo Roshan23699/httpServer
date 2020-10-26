@@ -9,10 +9,11 @@ from log_functions import *
 CHECK_AUTH = ["../var/www/html/", "../var/www/html/index.html"]
 
 
-def authorize(dict1, client, addr, ROOT):
+def authorize(headers, client, addr, ROOT):
 	#Here we need to check authorization but just checking if client has send the authorization then
 	#assuming that its true
-	if find_value("Authorization:", dict1) == None:
+	
+	if 'Authorization' in headers and headers['Authorization']== None:
 		return False
 	else:
 		 return True
