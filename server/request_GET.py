@@ -6,18 +6,10 @@ from support_functions import *
 from threading import Thread
 from authorization import CHECK_AUTH, authorize
 from status_4XX import *
-<<<<<<< HEAD
 def request_GET(headers, client, addr, ROOT):
             response = "\n"
             if headers['request-uri'] == "/":
                    headers['request-uri'] += "index.html"
-=======
-from request_conditional import *
-def request_GET(dict1, client, addr, ROOT):
-            response = ""
-            if dict1[1][len(dict1[1]) - 1] == "/":
-                   dict1[1] += "index.html"
->>>>>>> f677cbc0a855b94f8038fb6c0948511f4c659a9b
             #print(dict1[1kjfklal])
             #check the extention of the file to be sent
             content_type = check_extention(headers['request-uri'])
@@ -38,13 +30,7 @@ def request_GET(dict1, client, addr, ROOT):
                     curr_time = datetime.datetime.now()
                     response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
                     response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
-<<<<<<< HEAD
                     last_modified = os.path.getmtime(headers['request-uri'])
-=======
-                    
-
-                    last_modified = os.path.getmtime(dict1[1])
->>>>>>> f677cbc0a855b94f8038fb6c0948511f4c659a9b
                     #response += ("Last-Modified: " + last_modified.strftime("%A") + ", " + last_modified.strftime("%d") +  " " + last_modified.strftime("%b") + " " + last_modified.strftime("%Y") + " " + last_modified.strftime("%X") +  " GMT\n")
                     response += ("last-Modified: " + datetime.datetime.fromtimestamp(last_modified).strftime("%A, %d %b, %Y %I:%M:%S")+ " GMT\n")
                     response += 'ETag: ' + etag(dict1[1]) + '\n'
