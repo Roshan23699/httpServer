@@ -27,6 +27,7 @@ def not_implemented(headers, client, addr, parserT):
     response += read_file(headers['request-uri'], content_type)
     #requested_file.close()#no need of this statement any more
     client.send(response)
+    error_log(client, addr, curr_time, headers, parser)
     if 'Connection' in headers and headers['Connection'] != "keep-alive":
         client.close()
 
@@ -52,6 +53,7 @@ def internal_server_error(dict1, client, addr, parser):
     response += read_file(headers['request-uri'], content_type)
     #requested_file.close()#no need of this statement any more
     client.send(response)
+    error_log(client, addr, curr_time, headers, parser)
     if 'Connection' in headers and headers['Connection'] != "keep-alive":
         client.close()
 
@@ -78,5 +80,6 @@ def service_unvailable(dict1, client, addr, parser):
     response += read_file(headers['request-uri'], content_type)
     #requested_file.close()#no need of this statement any more
     client.send(response)
+    error_log(client, addr, curr_time, headers, parser)
     if 'Connection' in headers and  headers['Connection'] != "keep-alive":
         client.close()

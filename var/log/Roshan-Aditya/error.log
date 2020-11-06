@@ -1,0 +1,10 @@
+
+[Date: Friday, 06 Nov 2020 17:08:15 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Friday, 06 Nov 2020 17:11:41 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
