@@ -5,6 +5,7 @@ import datetime
 import mimetypes
 import re
 import email
+from configparser import ConfigParser
 from io import StringIO
 import status_5XX 
 #function to find the msg body of the request or even response if needed
@@ -12,16 +13,16 @@ def find_body(msg):
     msg.split('\n\n')
     return msg[1]
 #function to check headers and finding their values
-def find_value(x, y):
-    #x is the attribute of which value is to be found
-    #y is the array in which the value to be found
-    t = False
-    for val in y:
-        if t :
-            return val
-        if val == x:
-            t = True
-    return None
+# def find_value(x, y):
+#     #x is the attribute of which value is to be found
+#     #y is the array in which the value to be found
+#     t = False
+#     for val in y:
+#         if t :
+#             return val
+#         if val == x:
+#             t = True
+#     return None
 
 
 #function to return the extention of the file
@@ -107,3 +108,19 @@ def check_header(msg):
         return headers
     except Exception:
         return None
+
+# def read_conf_file(lines):
+#     conf = {}
+
+#     for i in lines:
+#         string = str(i).split(" ")
+#         print(string)
+#         if len(string) > 1:
+#             conf[string[0]] = string[1]
+#     return conf
+
+def config_parser():
+      
+    configur = ConfigParser() 
+    configur.read('etc/Roshan-Aditya/roshanaditya.conf')
+    return configur

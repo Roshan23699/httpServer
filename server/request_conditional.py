@@ -11,10 +11,11 @@ def check_etag(et, resource) :
 		return False
 
 
-def conditional_check(dict1):
+def conditional_check(headers):
 	#for now just checking based on etag
-	resource = dict1[1]
-	etag = find_value("ETag:", dict1)
+	resource = headers['request-uri']
+	if 'Etag' in headers:
+		etag = headers['Etag']
 	if check_etag(etag, resource):
 		return True
 	else :

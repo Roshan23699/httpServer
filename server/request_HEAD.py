@@ -2,8 +2,9 @@ from socket import *
 import sys
 import os
 import datetime
+from configparser import ConfigParser
 from support_functions import *
-def request_HEAD(headers, client, addr, ROOT):
+def request_HEAD(headers, client, addr, parser):
             response = "\n"
             if headers['request-uri'] == "/":
                 headers['request-uri'] += "index.html"
@@ -11,7 +12,7 @@ def request_HEAD(headers, client, addr, ROOT):
             #check the extention of the file to be sent
             content_type = check_extention(headers['request-uri'])
             temp = headers['request-uri']
-            headers['request-uri'] = ROOT
+            headers['request-uri'] = parser.get('server', 'DocumentRoot')
             headers['request-uri'] += temp
             #print(dict1)
 
@@ -33,6 +34,9 @@ def request_HEAD(headers, client, addr, ROOT):
                 #fall through
                 if content_type == None:
                     content_type = "text/html"
+                if 'Accept' in headers:
+                    if not ('*/*' in headers['Accept']  or content_type in headers['Accept']):
+                        return
                 response += "Content-Type: " + content_type + "\n\n"
                 #response += requested_file.read();
                 response = response.encode()
@@ -42,8 +46,8 @@ def request_HEAD(headers, client, addr, ROOT):
                 if 'Connection' in headers and  headers['Connection'] != "keep-alive":
                         client.close()
             else :
-                not_found(headers, client, addr, ROOT)
-                # headers['request-uri'] = ROOT
+                not_found(headers, client, addr, parser)
+                # headers['request-uri'] = parser
                 # headers['request-uri'] += "/error/notfound.html"
                 # response += "HTTP/1.1 404 Not Found\n"
                 # curr_time = datetime.datetime.now()
@@ -61,7 +65,7 @@ def request_HEAD(headers, client, addr, ROOT):
 
             # #fall through
             # if False :
-            #     dict1[1] = ROOT
+            #     dict1[1] = parser
             #     dict1[1] += "/error/error.html"
             #     response += "HTTP/1.1 400 Bad Request\n"
             #     curr_time = datetime.datetime.now()

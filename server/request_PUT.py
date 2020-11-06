@@ -2,9 +2,10 @@ from socket import *
 import sys
 import os
 import datetime
+from configparser import ConfigParser
 from support_functions import *
 from log_functions import *
-def request_PUT(headers, client, addr, ROOT, msg):
+def request_PUT(headers, client, addr, parser, msg):
             #create the requested resource
             #find the msg body
             # create_new_log(msg, "../var/log/Roshan-Aditya/access.log")
@@ -16,8 +17,8 @@ def request_PUT(headers, client, addr, ROOT, msg):
             #check the extention of the file to be sent
             content_type = check_extention(headers['request-uri'])
             temp = headers['request-uri']
-            headers['request-uri'] = ROOT
-            headers['request-uri'] += tempp
+            headers['request-uri'] = parser.get('server','DocumentRoot')
+            headers['request-uri'] += temp
 
             if os.path.exists(headers['request-uri']):
                 response += "HTTP/1.1 200 OK\n"
@@ -37,6 +38,9 @@ def request_PUT(headers, client, addr, ROOT, msg):
                 #fall through
                 if content_type == None:
                     content_type = "text/html"
+                if 'Accept' in headers:
+                    if not ('*/*' in headers['Accept']  or content_type in headers['Accept']):
+                        return
                 response += "Content-Type: " + content_type + "\n\n"
                 #response += requested_file.read();
                 response = response.encode()
@@ -46,8 +50,8 @@ def request_PUT(headers, client, addr, ROOT, msg):
                 if 'Connection' in headers and  headers['Connection'] != "keep-alive":
                     client.close()
             else :
-                not_found(headers, client, addr, ROOT)
-                # headers['request-uri'] = ROOT
+                not_found(headers, client, addr, parser)
+                # headers['request-uri'] = parser
                 # headers['request-uri'] += "/error/notfound.html"
                 # response += "HTTP/1.1 404 Not Found\n"
                 # curr_time = datetime.datetime.now()
@@ -65,7 +69,7 @@ def request_PUT(headers, client, addr, ROOT, msg):
 
             #fall through
             # if False :
-            #     dict1[1] = ROOT
+            #     dict1[1] = parser
             #     dict1[1] += "/error/error.html"
             #     response += "HTTP/1.1 400 Bad Request\n"
             #     curr_time = datetime.datetime.now()

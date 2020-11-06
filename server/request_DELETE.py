@@ -5,13 +5,13 @@ import datetime
 from support_functions import *
 from threading import Thread
 from status_4XX import *
-def request_DEL(headers, client, addr, ROOT):
+def request_DEL(headers, client, addr, parser):
     response = "\n"
     # if dict1[1] == "/":
     #     dict1[1] += "index.html"
     content_type = check_extention(headers['request-uri'])
     temp = headers['request-uri']
-    headers['request-uri'] = ROOT
+    headers['request-uri'] = parser
     headers['request-uri'] += temp
     if True: #authoriazation
         if True:
@@ -35,8 +35,8 @@ def request_DEL(headers, client, addr, ROOT):
             client.send(response)
             client.close()
     else:
-        bad_request(headers, client, addr, ROOT)
-        # headers['request-uri'] = ROOT
+        bad_request(headers, client, addr, parser)
+        # headers['request-uri'] = parser
         # headers['request-uri'] += "/error/error.html"
         # curr_time = datetime.datetime.now()
         # response += "HTTP/1.1 400 Bad Request\n"

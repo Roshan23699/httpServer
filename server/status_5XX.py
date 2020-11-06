@@ -2,11 +2,12 @@ from socket import *
 import sys
 import os
 import datetime
+from configparser import ConfigParser
 from support_functions import *
 from threading import Thread
-def not_implemented(headers, client, addr, ROOTT):
+def not_implemented(headers, client, addr, parserT):
     response = "\n"
-    headers['request-uri'] = ROOT
+    headers['request-uri'] = parser.get('server', 'DocumentRoot')
     headers['request-uri'] += "/5XX/not_implemented.html"
 
     response += "HTTP/1.1 501 Method Not Implemented\n"
@@ -29,9 +30,9 @@ def not_implemented(headers, client, addr, ROOTT):
     if 'Connection' in headers and headers['Connection'] != "keep-alive":
         client.close()
 
-def internal_server_error(dict1, client, addr, ROOT):
+def internal_server_error(dict1, client, addr, parser):
     response = "\n"
-    headers['request-uri'] = ROOT
+    headers['request-uri'] = parser.get('server', 'DocumentRoot')
     headers['request-uri'] += "/5XX/internal_server_error.html"
 
     response += "HTTP/1.1 500 Internal Server Error\n"
@@ -55,9 +56,9 @@ def internal_server_error(dict1, client, addr, ROOT):
         client.close()
 
 
-def service_unvailable(dict1, client, addr, ROOT):
+def service_unvailable(dict1, client, addr, parser):
     response = "\n"
-    headers['request-uri'] = ROOT
+    headers['request-uri'] = parser.get('server', 'DocumentRoot')
     headers['request-uri'] += "/5XX/service_unavailable.html"
 
     response += "HTTP/1.1 503 Service Unavailable\n"

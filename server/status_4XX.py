@@ -2,14 +2,15 @@ from socket import *
 import sys
 import os
 import datetime
+from configparser import ConfigParser
 from support_functions import *
 from log_functions import *
 from authorization import CHECK_AUTH
 
-def unauthorized(headers, client, addr, ROOT):
-    headers['request-uri'] = ROOT
+def unauthorized(headers, client, addr, parser):
+    headers['request-uri'] = parser.get('server','DocumentRoot')
     headers['request-uri'] += "/error/error.html"
-    verification_details = ROOT + "/post/form.html"
+    verification_details = parser.get('server','DocumentRoot') + "/post/form.html"
     response = "\n"
     response += "HTTP/1.1 401 Unauthorized\n"
     curr_time = datetime.datetime.now()
@@ -22,15 +23,15 @@ def unauthorized(headers, client, addr, ROOT):
         response += "\n"
     response  = response.encode()
     content_type = "text/html"
-    response += read_file(headers['request-uri'], content_type)
+    response += read_file(headers['request-uri'], 'text/html')
     client.send(response)
     if 'Connection' in headers and headers['Connection'] != "keep-alive":
         client.close() 
 
-def bad_request(headers, client, addr, ROOT):
-    headers['request-uri'] = ROOT
+def bad_request(headers, client, addr, parser):
+    headers['request-uri'] = parser.get('server','DocumentRoot')
     headers['request-uri'] += "/error/error.html"
-    esponse = "\n"
+    response = "\n"
     response += "HTTP/1.1 404 Bad Request\n"
     curr_time = datetime.datetime.now()
     response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
@@ -40,13 +41,14 @@ def bad_request(headers, client, addr, ROOT):
     response += "Connection: close" + "\n"
     response += "Content-Type: " + content_type + "\n\n"
     response = response.encode()
-    response += read_file(headers['request-uri'], content_type)
+    response += read_file(headers['request-uri'], 'text/html')
     client.send(response)
     client.close()
 
-def not_found(headers, client, addr, ROOT):
-    headers['request-uri'] = ROOT
+def not_found(headers, client, addr, parser):
+    headers['request-uri'] = parser.get('server','DocumentRoot')
     headers['request-uri'] += "/error/notfound.html"
+    response = "\n"
     response += "HTTP/1.1 404 Not Found\n"
     curr_time = datetime.datetime.now()
     response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
@@ -61,7 +63,7 @@ def not_found(headers, client, addr, ROOT):
     else :
         response += "\n"
     response  = response.encode()
-    response += read_file(headers['request-uri'], content_type)
+    response += read_file(headers['request-uri'], 'text/html')
     client.send(response)
     if 'Connection' in headers and  headers['Connection'] != "keep-alive":
         client.close() 

@@ -2,20 +2,24 @@ from socket import *
 import sys
 import os
 import datetime
+from configparser import ConfigParser
 from request_GET import request_GET
 from support_functions import *
 from request_HEAD import request_HEAD
 from request_DELETE import request_DEL
 from request_POST import *
 from status_5XX import *
+from support_functions import *
 import pprint
 import threading
 import time
 import re
 #Global Section
-ROOT = "../var/www/html"
 
-def response(client, addr, ROOT):
+parser = config_parser()
+
+
+def response(client, addr, parser):
     requests = []
     msg = client.recv(1024).decode('utf-8')
 
@@ -31,17 +35,17 @@ def response(client, addr, ROOT):
         headers['request-uri'] = str(msg).split()[1]
         headers['version'] = str(msg).split()[2]
         pprint.pprint(headers, width=160)
-    request(client, addr, ROOT, headers, msg)
+    request(client, addr, parser, headers, msg)
     return
         # if msg == '\r\n':
         #     #print("hi")
-        #     request(client, addr, ROOT, requests)
+        #     request(client, addr, parser, requests)
         #     return
         # requests.append(msg)
 
-def timeout(client, addr, ROOT): 
+def timeout(client, addr, parser): 
     dict1 = ''
-    path = ROOT
+    path = parser.get('server', 'DocumentRoot')
     path += "/error/timeout.html"
     content_type = check_extention(path)
     server_response = "HTTP/1.1 400 Request Timeout\n"
@@ -59,21 +63,21 @@ def timeout(client, addr, ROOT):
         client.close()
 
 
-def request(client, addr, ROOT, headers, msg):
+def request(client, addr, parser, headers, msg):
     if(len(headers) == 0):
         return
     if headers['method'] == "GET":
-        request_GET(headers, client, addr, ROOT)
+        request_GET(headers, client, addr, parser)
     elif headers['method'] == "POST":
-        request_POST(headers1, client, addr, ROOT, msg)
+        request_POST(headers, client, addr, parser, msg)
     elif headers['method'] == "HEAD":
-        request_HEAD(headers1, client, addr, ROOT)
+        request_HEAD(headers1, client, addr, parser)
     elif headers['method'] == "DELETE":
-        request_DEL(headers1,client, addr,ROOT)
+        request_DEL(headers1,client, addr,parser)
     elif headers['method'] == "PUT":
-        request_PUT(headers1, client, addr, ROOT)
+        request_PUT(headers1, client, addr, parser)
     else:
-        not_implemented(headers1, client, addr, ROOT)
+        not_implemented(headers1, client, addr, parser)
         
 if __name__ == "__main__":
     host = '127.0.0.1'
@@ -92,9 +96,9 @@ if __name__ == "__main__":
         # requests = []
         # msg = client.recv(1024).decode('utf-8')
         # requests.append(msg)
-        # request(client, addr, ROOT, requests)
+        # request(client, addr, parser, requests)
         try:
-            new_client = threading.Thread(target=response, args=[client, addr, ROOT])
+            new_client = threading.Thread(target=response, args=[client, addr, parser])
             new_client.daemon = True
             new_client.start()
             #new_client.join()
@@ -112,4 +116,4 @@ if __name__ == "__main__":
         
         # #check for the request
         # if dict1[0] == "GET":
-        #     request_GET(dict1, client, addr, ROOT)
+        #     request_GET(dict1, client, addr, parser)
