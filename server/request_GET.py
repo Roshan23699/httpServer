@@ -9,10 +9,14 @@ from log_functions import *
 from authorization import CHECK_AUTH, authorize
 from status_4XX import *
 from cookies import setCookie, checkCookie
+from Moved_Permanentely import MOVED_PERMANENTELY
+from status_3XX import moved_permanentely
 def request_GET(headers, client, addr, parser):
     response = "\n"
     if headers['request-uri'] == "/":
         headers['request-uri'] += "index.html"
+    if(headers['request-uri'] in MOVED_PERMANENTELY):
+        moved_permanentely(headers, client, addr, parser)
     #check the extention of the file to be sent
     content_type = check_extention(headers['request-uri'])
     temp = headers['request-uri']
