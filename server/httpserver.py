@@ -9,6 +9,7 @@ from request_DELETE import request_DEL
 from request_POST import *
 from status_5XX import *
 from support_functions import *
+from request_PUT import *
 import pprint
 import threading
 import time
@@ -70,13 +71,13 @@ def request(client, addr, parser, headers, msg):
     elif headers['method'] == "POST":
         request_POST(headers, client, addr, parser, msg)
     elif headers['method'] == "HEAD":
-        request_HEAD(headers1, client, addr, parser)
+        request_HEAD(headers, client, addr, parser)
     elif headers['method'] == "DELETE":
-        request_DEL(headers1,client, addr,parser)
+        request_DEL(headers,client, addr,parser)
     elif headers['method'] == "PUT":
-        request_PUT(headers1, client, addr, parser)
+        request_PUT(headers, client, addr, parser, msg)
     else:
-        not_implemented(headers1, client, addr, parser)
+        not_implemented(headers, client, addr, parser)
         
 if __name__ == "__main__":
     host = '127.0.0.1'

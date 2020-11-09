@@ -347,3 +347,9 @@ Monday, 09 Nov 2020 08:15:16 GMT
 GET ../var/www/html/name.jpg HTTP/1.1
 200
 137104
+
+127.0.0.1
+Monday, 09 Nov 2020 09:21:31 GMT
+PUT ../var/www/html/new.html HTTP/1.1
+200
+
