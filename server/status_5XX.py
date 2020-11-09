@@ -5,7 +5,7 @@ import datetime
 from configparser import ConfigParser
 from support_functions import *
 from threading import Thread
-def not_implemented(headers, client, addr, parserT):
+def not_implemented(headers, client, addr, parser):
     response = "\n"
     headers['request-uri'] = parser.get('server', 'DocumentRoot')
     headers['request-uri'] += "/5XX/not_implemented.html"
@@ -31,7 +31,7 @@ def not_implemented(headers, client, addr, parserT):
     if 'Connection' in headers and headers['Connection'] != "keep-alive":
         client.close()
 
-def internal_server_error(dict1, client, addr, parser):
+def internal_server_error(headers, client, addr, parser):
     response = "\n"
     headers['request-uri'] = parser.get('server', 'DocumentRoot')
     headers['request-uri'] += "/5XX/internal_server_error.html"
@@ -58,7 +58,7 @@ def internal_server_error(dict1, client, addr, parser):
         client.close()
 
 
-def service_unvailable(dict1, client, addr, parser):
+def service_unvailable(headers, client, addr, parser):
     response = "\n"
     headers['request-uri'] = parser.get('server', 'DocumentRoot')
     headers['request-uri'] += "/5XX/service_unavailable.html"

@@ -8,6 +8,7 @@ from request_conditional import *
 from log_functions import *
 from authorization import CHECK_AUTH, authorize
 from status_4XX import *
+from cookies import setCookie, checkCookie
 def request_GET(headers, client, addr, parser):
     response = "\n"
     if headers['request-uri'] == "/":
@@ -28,6 +29,14 @@ def request_GET(headers, client, addr, parser):
                 response += "HTTP/1.1 304 Not Modified\n"
             else :
                 response += "HTTP/1.1 200 OK\n"
+                if checkCookie(headers):
+                    #don't send cookie for now
+                    # print("\n\n\n\n")
+                    # print(headers)
+                    # print("\n\n\n\n")
+                    pass
+                else :
+                    response = setCookie(response)
                 curr_time = datetime.datetime.now()
                 response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
                 response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
