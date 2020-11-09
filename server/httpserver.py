@@ -4,7 +4,6 @@ import os
 import datetime
 from configparser import ConfigParser
 from request_GET import request_GET
-from support_functions import *
 from request_HEAD import request_HEAD
 from request_DELETE import request_DEL
 from request_POST import *

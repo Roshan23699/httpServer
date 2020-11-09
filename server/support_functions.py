@@ -101,8 +101,9 @@ def check_header(msg):
 
         # construct a dictionary containing the headers
         headers = dict(message.items())
-
+        # print("\n\n\n\n")
         # print(headers)
+        # print("\n\n\n\n")
         # # pretty-print the dictionary of headers
         # pprint.pprint(headers, width=160)
         return headers
