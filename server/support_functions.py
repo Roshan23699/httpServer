@@ -122,5 +122,5 @@ def check_header(msg):
 def config_parser():
       
     configur = ConfigParser() 
-    configur.read('etc/Roshan-Aditya/roshanaditya.conf')
+    configur.read('../etc/Roshan-Aditya/roshanaditya.conf')
     return configur
