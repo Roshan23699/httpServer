@@ -34,17 +34,43 @@ client denied by server configuration:../var/www/html/favicon.ico
 [client 127.0.0.1 ]
 client denied by server configuration:../var/www/html/favicon.ico
 
+<<<<<<< HEAD
 [Date: Monday, 09 Nov 2020 16:49:01 GMT
 [error]
 [client 127.0.0.1 ]
 client denied by server configuration:../var/www/html/location.html?email=rabhang07%40gmail.com&pswd=roshan%40123
 
 [Date: Monday, 09 Nov 2020 19:49:08 GMT
+=======
+[Date: Monday, 09 Nov 2020 16:42:31 GMT
 [error]
 [client 127.0.0.1 ]
 client denied by server configuration:../var/www/html/favicon.ico
 
+[Date: Monday, 09 Nov 2020 17:12:25 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Monday, 09 Nov 2020 17:13:38 GMT
+>>>>>>> 148db5ac3c0a92dda8900ff7a59be3501cbfc6ce
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+<<<<<<< HEAD
 [Date: Monday, 09 Nov 2020 21:00:21 GMT
 [error]
 [client 127.0.0.1 ]
 client denied by server configuration:../var/www/html/notices
+=======
+[Date: Monday, 09 Nov 2020 17:40:18 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Monday, 09 Nov 2020 17:50:05 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+>>>>>>> 148db5ac3c0a92dda8900ff7a59be3501cbfc6ce
