@@ -353,3 +353,189 @@ Monday, 09 Nov 2020 09:21:31 GMT
 PUT ../var/www/html/new.html HTTP/1.1
 200
 
+
+127.0.0.1
+Monday, 09 Nov 2020 16:36:40 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Monday, 09 Nov 2020 16:36:41 GMT
+GET ../var/www/html/award4.jpg HTTP/1.1
+200
+77306
+
+127.0.0.1
+Monday, 09 Nov 2020 16:36:41 GMT
+GET ../var/www/html/award2.jpg HTTP/1.1
+200
+85017
+
+127.0.0.1
+Monday, 09 Nov 2020 16:36:41 GMT
+GET ../var/www/html/award3.jpg HTTP/1.1
+200
+133492
+
+127.0.0.1
+Monday, 09 Nov 2020 16:36:41 GMT
+GET ../var/www/html/name.jpg HTTP/1.1
+200
+137104
+
+127.0.0.1
+Monday, 09 Nov 2020 16:40:43 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Monday, 09 Nov 2020 16:45:23 GMT
+GET ../var/www/html/results.html HTTP/1.1
+200
+23676
+
+127.0.0.1
+Monday, 09 Nov 2020 16:45:31 GMT
+GET ../var/www/html/news.html HTTP/1.1
+200
+19442
+
+127.0.0.1
+Monday, 09 Nov 2020 16:45:31 GMT
+GET ../var/www/html/n28.jpg HTTP/1.1
+200
+76405
+
+127.0.0.1
+Monday, 09 Nov 2020 16:45:31 GMT
+GET ../var/www/html/n22.jpg HTTP/1.1
+200
+116531
+
+127.0.0.1
+Monday, 09 Nov 2020 16:45:31 GMT
+GET ../var/www/html/n27.jpg HTTP/1.1
+200
+129683
+
+127.0.0.1
+Monday, 09 Nov 2020 16:45:30 GMT
+GET ../var/www/html/passport.jpg HTTP/1.1
+200
+273587
+
+127.0.0.1
+Monday, 09 Nov 2020 16:45:31 GMT
+GET ../var/www/html/n12.jpg HTTP/1.1
+200
+406619
+
+127.0.0.1
+Monday, 09 Nov 2020 16:47:54 GMT
+GET ../var/www/html/passport.jpg HTTP/1.1
+200
+273587
+
+127.0.0.1
+Monday, 09 Nov 2020 16:48:12 GMT
+GET ../var/www/html/location.html HTTP/1.1
+200
+18510
+
+127.0.0.1
+Monday, 09 Nov 2020 16:50:03 GMT
+GET ../var/www/html/geninfo.html HTTP/1.1
+200
+19868
+
+127.0.0.1
+Monday, 09 Nov 2020 16:50:03 GMT
+GET ../var/www/html/school.jpg HTTP/1.1
+200
+472666
+
+127.0.0.1
+Monday, 09 Nov 2020 16:50:21 GMT
+GET ../var/www/html/procedure.html HTTP/1.1
+200
+16289
+
+127.0.0.1
+Monday, 09 Nov 2020 16:50:34 GMT
+GET ../var/www/html/prmsg.html HTTP/1.1
+200
+13276
+
+127.0.0.1
+Monday, 09 Nov 2020 19:49:07 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Monday, 09 Nov 2020 19:49:07 GMT
+GET ../var/www/html/award4.jpg HTTP/1.1
+200
+77306
+
+127.0.0.1
+Monday, 09 Nov 2020 19:49:07 GMT
+GET ../var/www/html/award2.jpg HTTP/1.1
+200
+85017
+
+127.0.0.1
+Monday, 09 Nov 2020 19:49:07 GMT
+GET ../var/www/html/award3.jpg HTTP/1.1
+200
+133492
+
+127.0.0.1
+Monday, 09 Nov 2020 19:49:07 GMT
+GET ../var/www/html/name.jpg HTTP/1.1
+200
+137104
+
+127.0.0.1
+Monday, 09 Nov 2020 19:51:36 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Monday, 09 Nov 2020 20:58:35 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Monday, 09 Nov 2020 20:59:09 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Monday, 09 Nov 2020 20:59:50 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Monday, 09 Nov 2020 21:00:44 GMT
+GET ../var/www/html/n28.jpg HTTP/1.1
+200
+76405
+
+127.0.0.1
+Monday, 09 Nov 2020 21:00:44 GMT
+GET ../var/www/html/n22.jpg HTTP/1.1
+200
+116531
+
+127.0.0.1
+Monday, 09 Nov 2020 21:00:44 GMT
+GET ../var/www/html/n27.jpg HTTP/1.1
+200
+129683

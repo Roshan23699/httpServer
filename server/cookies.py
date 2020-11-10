@@ -12,9 +12,9 @@ def setCookie(response):
 	curr_time = datetime.datetime.now()
 	expires = 24 * 60 * 60
 	#setting up the expiry time after 1 day, doesn't make sense to hardcode but this can be extended
-	curr_time += expires
+	curr_time += datetime.timedelta(days=1)
 	#setting up the cookie and its life
-	response += "Set-Cookie: user=12123; Expires=" + expires + ";"
+	response += "Set-Cookie: user=12123; Expires=" + str(expires) + ";"
 	#setting up the secure tag to not allow the man in middle attack
 	#the cookie is only sent with the secure (https) http pages inside server can't send the cookie with secure tag
 	response += "Secure;"

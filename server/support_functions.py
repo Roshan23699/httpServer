@@ -54,54 +54,6 @@ def write_file(f, content):
         return False
 
 
-# def check_header(msg):
-#     l = []
-#     for i in msg.split('\r\n'):
-#         if "GET" in i or "POST" in i or "DELETE" in i or "POST" in i:
-#             l.append(split_header_line(i))
-#         if "host" in i.lower():
-#             l.append(split_header_line(i))
-#         if "accept-charset" in i.lower():
-#             l.append(split_header_line(i))
-#         if "accept-encoding" in i.lower():
-#             l.append(split_header_line(i))
-#         if "accept-language" in i.lower():
-#             l.append(split_header_line(i))
-#         if "accept" in i.lower():
-#             l.append(split_header_line(i))
-#         if "authorization" in i.lower():
-#             l.append(split_header_line(i))
-#         if "expect" in i.lower():
-#             l.append(split_header_line(i))
-#         if "from" in i.lower():
-#             l.append(split_header_line(i))
-#         if "if-match" in i.lower():
-#             l.append(split_header_line(i))
-#         if "if-modified-since" in i.lower():
-#             l.append(split_header_line(i))
-#         if "if-none-match" in i.lower():
-#             l.append(split_header_line(i))
-#         if "if-range" in i.lower():
-#             l.append(split_header_line(i))
-#         if "if-unmodified-since" in i.lower():
-#             l.append(split_header_line(i))
-#         if "max-forwards" in i.lower():
-#             l.append(split_header_line(i))
-#         if "proxy-authorization" in i.lower():
-#             l.append(split_header_line(i))
-#         if "range" in i.lower():
-#             l.append(split_header_line(i))
-#         if "referer" in i.lower():
-#             l.append(split_header_line(i))
-#         if "user-agent" in i.lower():
-#             l.append(split_header_line(i))
-#         # else:
-#         #     return None
-#     return l
-
-# def split_header_line(line):
-#     return line.split(' ')
-
 def check_header(msg):
     
     try:
@@ -122,15 +74,6 @@ def check_header(msg):
     except Exception:
         return None
 
-# def read_conf_file(lines):
-#     conf = {}
-
-#     for i in lines:
-#         string = str(i).split(" ")
-#         print(string)
-#         if len(string) > 1:
-#             conf[string[0]] = string[1]
-#     return conf
 
 def config_parser():
       

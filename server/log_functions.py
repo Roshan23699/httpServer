@@ -7,7 +7,7 @@ import logging
 
 def create_new_log(data, file_name):
     f = open(file_name, "a")  # append mode
-    f.write("\n")
+    f.write("\n")   
     f.write(data)
     f.close()
 

@@ -10,6 +10,7 @@ from request_POST import *
 from status_5XX import *
 from support_functions import *
 from request_PUT import *
+from log_functions import *
 import pprint
 import threading
 import time
@@ -26,23 +27,19 @@ def response(client, addr, parser):
     requests.append(msg)
     headers = check_header(str(msg))
     if headers:
-        headers['method'] = str(msg).split()[0]
-        headers['request-uri'] = str(msg).split()[1]
-        headers['version'] = str(msg).split()[2]
-        pprint.pprint(headers, width=160)
+        if str(msg).split():
+            headers['method'] = str(msg).split()[0]
+            headers['request-uri'] = str(msg).split()[1]
+            headers['version'] = str(msg).split()[2]
     else:
-        headers['method'] = str(msg).split()[0]
-        headers['request-uri'] = str(msg).split()[1]
-        headers['version'] = str(msg).split()[2]
-        pprint.pprint(headers, width=160)
+        if  str(msg).split():
+            headers['method'] = str(msg).split()[0]
+            headers['request-uri'] = str(msg).split()[1]
+            headers['version'] = str(msg).split()[2]
+    pprint.pprint(headers, width=160)
     request(client, addr, parser, headers, msg)
     return
-        # if msg == '\r\n':
-        #     #print("hi")
-        #     request(client, addr, parser, requests)
-        #     return
-        # requests.append(msg)
-
+   
 def timeout(client, addr, parser): 
     dict1 = ''
     path = parser.get('server', 'DocumentRoot')
@@ -64,7 +61,7 @@ def timeout(client, addr, parser):
 
 
 def request(client, addr, parser, headers, msg):
-    if(len(headers) == 0):
+    if headers is None:
         return
     if headers['method'] == "GET":
         request_GET(headers, client, addr, parser)
@@ -91,12 +88,8 @@ if __name__ == "__main__":
 
     while True:
         client, addr = server_socket.accept()
-        print("connection has recieved from ip", addr[0])
-        print("on port", addr[1])
-        # requests = []
-        # msg = client.recv(1024).decode('utf-8')
-        # requests.append(msg)
-        # request(client, addr, parser, requests)
+        msg = str(datetime.datetime.now()) + " connection has recieved from ip " + str(addr[0]) + " on port " + str(addr[1])
+        create_new_log(msg, parser.get('server', 'DebugLog'))
         try:
             new_client = threading.Thread(target=response, args=[client, addr, parser])
             new_client.daemon = True

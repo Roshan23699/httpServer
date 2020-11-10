@@ -33,3 +33,18 @@ client denied by server configuration:../var/www/html/favicon.ico
 [error]
 [client 127.0.0.1 ]
 client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Monday, 09 Nov 2020 16:49:01 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/location.html?email=rabhang07%40gmail.com&pswd=roshan%40123
+
+[Date: Monday, 09 Nov 2020 19:49:08 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Monday, 09 Nov 2020 21:00:21 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/notices
