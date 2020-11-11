@@ -85,6 +85,7 @@ client denied by server configuration:../var/www/html/favicon.ico
 [client 127.0.0.1 ]
 client denied by server configuration:../var/www/html/error/error.html
 
+<<<<<<< HEAD
 [Date: Wednesday, 11 Nov 2020 13:46:55 GMT
 [error]
 [client 127.0.0.1 ]
@@ -94,3 +95,14 @@ client denied by server configuration:../var/www/html/favicon.ico
 [error]
 [client 127.0.0.1 ]
 client denied by server configuration:../var/www/html/volim/imgs/d2.jpg
+=======
+[Date: Wednesday, 11 Nov 2020 12:55:22 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/index.html
+
+[Date: Wednesday, 11 Nov 2020 12:55:55 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/index.html
+>>>>>>> 48e8aa13e761eee5610f56b343086dfd28047e87
