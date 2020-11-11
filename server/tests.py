@@ -4,7 +4,7 @@ from threading import Thread
 import sys
 #stress test
 def test_GET(no_of_requests_at_a_time):
-	url = 'http://127.0.0.1:12000/volim/'
+	url = 'http://127.0.0.1:12000/volim/index.html'
 	data = {'somekey': 'somevalue'}
 	start = time()
 	for _ in range(no_of_requests_at_a_time):
@@ -83,7 +83,8 @@ def send_HEAD(url):
 	r.close()
 
 if __name__ == "__main__":
-	time = test_GET(300)
-	print(time)
+	test_HEAD(1)
+	#time = test_GET(10)
+	#print(time)
 	sys.exit(0)
 	
