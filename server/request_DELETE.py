@@ -5,7 +5,12 @@ import datetime
 from support_functions import *
 from threading import Thread
 from status_4XX import *
+pending = []
 def request_DEL(headers, client, addr, parser):
+    global pending
+    admin_permission_files = parser.get('server', 'DocumentRoot')
+    admin_permission_files += "adminpermission/"
+
     response = "\n"
     # if dict1[1] == "/":
     #     dict1[1] += "index.html"
@@ -27,6 +32,22 @@ def request_DEL(headers, client, addr, parser):
                 response += "Content-Type: " + content_type + "\n\n"
                 response = response.encode()
                 response += read_file('../var/www/html/filedeleted.html', content_type)
+                response += "\n"
+                client.send(response)
+                client.close()
+            elif admin_permission_files in headers['request-uri']:
+                pending.append(headers['request-uri'])
+                response += "HTTP/1.1 202 Accepted\n"
+                curr_time = datetime.datetime.now()
+                response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
+                response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
+                content_length = os.path.getsize(headers['request-uri'])
+                response += "Content-Length: " + str(content_length) + "\n"
+                if content_type == None:
+                    content_type = "text/html"
+                response += "Content-Type: " + content_type + "\n\n"
+                response = response.encode()
+                #response += read_file('../var/www/html/filedeleted.html', content_type)
                 response += "\n"
                 client.send(response)
                 client.close()

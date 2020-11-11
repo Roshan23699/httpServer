@@ -1130,3 +1130,63 @@ Tuesday, 10 Nov 2020 21:48:06 GMT
 GET ../var/www/html/index.html HTTP/1.1
 200
 15238
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:28 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:29 GMT
+GET ../var/www/html/award4.jpg HTTP/1.1
+200
+77306
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:29 GMT
+GET ../var/www/html/award2.jpg HTTP/1.1
+200
+125269
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:29 GMT
+GET ../var/www/html/name.jpg HTTP/1.1
+200
+137104
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:29 GMT
+GET ../var/www/html/award3.jpg HTTP/1.1
+200
+133492
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:41 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:42 GMT
+GET ../var/www/html/award4.jpg HTTP/1.1
+200
+77306
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:42 GMT
+GET ../var/www/html/award2.jpg HTTP/1.1
+200
+125269
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:42 GMT
+GET ../var/www/html/award3.jpg HTTP/1.1
+200
+133492
+
+127.0.0.1
+Wednesday, 11 Nov 2020 08:45:42 GMT
+GET ../var/www/html/name.jpg HTTP/1.1
+200
+137104

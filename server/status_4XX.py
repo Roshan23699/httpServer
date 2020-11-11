@@ -40,7 +40,7 @@ def bad_request(headers, client, addr, parser):
     content_length = os.path.getsize(path)
     response += "Content-Length: " + str(content_length) + "\n"
     response += "Connection: close" + "\n"
-    response += "Content-Type: " + content_type + "\n\n"
+    response += "Content-Type: " + "text/html" + "\n\n"
     response = response.encode()
     response += read_file(path, 'text/html')
     client.send(response)
