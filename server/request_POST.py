@@ -10,7 +10,7 @@ def request_POST(headers, client, addr, parser, msg):
             #find the msg body
             create_new_log(msg, parser.get('server', 'PostLog'))
             #handle the resource requested
-            response = "\n"
+            response = ""
             if headers['request-uri'] == "/":
                 headers['request-uri'] += "index.html"
             #check the extention of the file to be sent

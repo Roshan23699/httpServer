@@ -25,10 +25,10 @@ def conditional_check(headers):
 	resource = headers['request-uri']
 	if 'If-None-Match' in headers:
 		et = headers['If-None-Match']
-		print("\n\n\n")
-		print(et)
-		print(etag(resource))
-		print("\n\n\n")
+		# print("\n\n\n")
+		# print(et)
+		# print(etag(resource))
+		# print("\n\n\n")
 		if check_etag(et, resource):
 			return True
 	return False

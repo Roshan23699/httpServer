@@ -7,7 +7,7 @@ from support_functions import *
 from log_functions import *
 from status_5XX import *
 def request_PUT(headers, client, addr, parser, msg):
-            response = "\n"
+            response = ""
             content_type = check_extention(headers['request-uri'])
             temp = headers['request-uri']
             headers['request-uri'] = parser.get('server','DocumentRoot')

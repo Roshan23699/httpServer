@@ -11,7 +11,7 @@ def request_DEL(headers, client, addr, parser):
     admin_permission_files = parser.get('server', 'DocumentRoot')
     admin_permission_files += "adminpermission/"
 
-    response = "\n"
+    response = ""
     # if dict1[1] == "/":
     #     dict1[1] += "index.html"
     content_type = check_extention(headers['request-uri'])
