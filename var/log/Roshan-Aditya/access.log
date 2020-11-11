@@ -1082,3 +1082,51 @@ GET ../var/www/html/index.html HTTP/1.1
 200
 15238
 >>>>>>> 148db5ac3c0a92dda8900ff7a59be3501cbfc6ce
+
+127.0.0.1
+Tuesday, 10 Nov 2020 21:36:09 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Tuesday, 10 Nov 2020 21:36:09 GMT
+GET ../var/www/html/award4.jpg HTTP/1.1
+200
+77306
+
+127.0.0.1
+Tuesday, 10 Nov 2020 21:36:09 GMT
+GET ../var/www/html/award2.jpg HTTP/1.1
+200
+125269
+
+127.0.0.1
+Tuesday, 10 Nov 2020 21:36:09 GMT
+GET ../var/www/html/name.jpg HTTP/1.1
+200
+137104
+
+127.0.0.1
+Tuesday, 10 Nov 2020 21:36:09 GMT
+GET ../var/www/html/award3.jpg HTTP/1.1
+200
+133492
+
+127.0.0.1
+Tuesday, 10 Nov 2020 21:39:52 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Tuesday, 10 Nov 2020 21:48:01 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238
+
+127.0.0.1
+Tuesday, 10 Nov 2020 21:48:06 GMT
+GET ../var/www/html/index.html HTTP/1.1
+200
+15238

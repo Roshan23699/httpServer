@@ -8,6 +8,7 @@ from request_HEAD import request_HEAD
 from request_DELETE import request_DEL
 from request_POST import *
 from status_5XX import *
+from status_4XX import *
 from support_functions import *
 from request_PUT import *
 from log_functions import *
@@ -26,16 +27,15 @@ def response(client, addr, parser):
 
     requests.append(msg)
     headers = check_header(str(msg))
-    if headers:
-        if str(msg).split():
-            headers['method'] = str(msg).split()[0]
-            headers['request-uri'] = str(msg).split()[1]
-            headers['version'] = str(msg).split()[2]
+    firstline = str(msg).split('\r\n')
+    if firstline[0].split():
+        headers['method'] = firstline[0].split()[0]
+        headers['request-uri'] = firstline[0].split()[1]
+        if len(firstline[0].split()) > 2:
+            headers['version'] = firstline[0].split()[2]
     else:
-        if  str(msg).split():
-            headers['method'] = str(msg).split()[0]
-            headers['request-uri'] = str(msg).split()[1]
-            headers['version'] = str(msg).split()[2]
+        bad_request(headers, client, addr, parser)
+
     pprint.pprint(headers, width=160)
     request(client, addr, parser, headers, msg)
     return
