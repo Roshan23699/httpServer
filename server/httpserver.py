@@ -41,7 +41,7 @@ def response(client, addr, parser):
     return
    
 def timeout(client, addr, parser): 
-    dict1 = ''
+    time.sleep(3)
     path = parser.get('server', 'DocumentRoot')
     path += "/error/timeout.html"
     content_type = check_extention(path)
@@ -56,8 +56,7 @@ def timeout(client, addr, parser):
     server_response  = server_response.encode()
     server_response += read_file(path, content_type)
     client.send(server_response)
-    if find_value("Connection:", dict1) != "keep-alive":
-        client.close()
+    client.close()
 
 
 def request(client, addr, parser, headers, msg):
@@ -87,26 +86,20 @@ if __name__ == "__main__":
 
 
     while True:
-        client, addr = server_socket.accept()
-        msg = str(datetime.datetime.now()) + " connection has recieved from ip " + str(addr[0]) + " on port " + str(addr[1])
-        create_new_log(msg, parser.get('server', 'DebugLog'))
+        
         try:
+            client, addr = server_socket.accept()
+            msg = str(datetime.datetime.now()) + " connection has recieved from ip " + str(addr[0]) + " on port " + str(addr[1])
+            create_new_log(msg, parser.get('server', 'DebugLog'))
             new_client = threading.Thread(target=response, args=[client, addr, parser])
+            new_client_timeout = threading.Thread(target=timeout, args=[client, addr, parser, ])
             new_client.daemon = True
+            new_client_timeout.daemon = True
+            new_client_timeout.start()
             new_client.start()
             #new_client.join()
         except Exception or OSError:
             print()
-        # client.close()
-        #msg = client.recv(1024).decode('utf-8')
-        #while not (msg[len(msg) - 2] == '\n' and msg[len(msg) - 1] == '\n'):
-            #msg += client.recv(1024).decode('utf-8')
-            #print(msg)
-        # dict1 = msg.split()
-        # if len(dict1) == 0:
-        #     continue
-        # print(dict1)
-        
-        # #check for the request
-        # if dict1[0] == "GET":
-        #     request_GET(dict1, client, addr, parser)
+        except KeyboardInterrupt:
+            print("Server has been stopped forcefully")
+            sys.exit()

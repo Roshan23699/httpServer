@@ -6,6 +6,7 @@ import unittest
 import os
 #stress test
 def test_GET(no_of_requests_at_a_time):
+
 	data = {'somekey': 'somevalue'}
 	start = time()
 	url = 'http://127.0.0.1:12000/lib.html'
@@ -124,6 +125,7 @@ class Test_GET(unittest.TestCase):
 
 
 if __name__ == "__main__":
+
 	#client for confirmance tests
 	from socket import *
 	serverName = '127.0.0.1'
@@ -138,6 +140,7 @@ if __name__ == "__main__":
 	# modifiedSentence = clientSocket.recv(1024)
 	# print('From Server: ', modifiedSentence.decode())
 	# clientSocket.close()
+
 	# time = test_GET(100)
 	# print('time for 100 get requests' + ' :' + str(time))
 	time = test_HEAD(int(100))
@@ -154,4 +157,3 @@ if __name__ == "__main__":
 	print(str(time))
 
 	os._exit(0)
-	
