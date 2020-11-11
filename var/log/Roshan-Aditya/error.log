@@ -84,3 +84,13 @@ client denied by server configuration:../var/www/html/favicon.ico
 [error]
 [client 127.0.0.1 ]
 client denied by server configuration:../var/www/html/error/error.html
+
+[Date: Wednesday, 11 Nov 2020 12:55:22 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/index.html
+
+[Date: Wednesday, 11 Nov 2020 12:55:55 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/index.html
