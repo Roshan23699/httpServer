@@ -26,6 +26,8 @@ def response(client, addr, parser):
     msg = client.recv(1024).decode('utf-8')
 
     requests.append(msg)
+    if(len(msg) == 0):
+        return
     headers = check_header(str(msg))
     firstline = str(msg).split('\r\n')
     if firstline[0].split():
@@ -92,14 +94,14 @@ if __name__ == "__main__":
             msg = str(datetime.datetime.now()) + " connection has recieved from ip " + str(addr[0]) + " on port " + str(addr[1])
             create_new_log(msg, parser.get('server', 'DebugLog'))
             new_client = threading.Thread(target=response, args=[client, addr, parser])
-            new_client_timeout = threading.Thread(target=timeout, args=[client, addr, parser, ])
+            # new_client_timeout = threading.Thread(target=timeout, args=[client, addr, parser, ])
             new_client.daemon = True
-            new_client_timeout.daemon = True
-            new_client_timeout.start()
+            # new_client_timeout.daemon = True
+            # new_client_timeout.start()
             new_client.start()
             #new_client.join()
-        except Exception or OSError:
-            print()
+        except Exception or OSError as e:
+            print(e)
         except KeyboardInterrupt:
             print("Server has been stopped forcefully")
             sys.exit()

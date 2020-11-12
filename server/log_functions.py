@@ -21,6 +21,8 @@ def error_log(client, addr, curr_time, headers, parser):
 def custom_log(client, addr, curr_time, headers, parser, status_code, content_length):
     customlog = str(addr[0]) + "\n"
     customlog +=  curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n"
+    if not 'version' in headers :
+        headers['version'] = 'HTTP/1.1'
     customlog +=  headers['method'] + " " + headers['request-uri'] + " " + headers['version'] + "\n"
     customlog +=  status_code + "\n"
     customlog +=  content_length + "\n"

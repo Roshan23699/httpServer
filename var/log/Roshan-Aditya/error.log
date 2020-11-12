@@ -113,3 +113,58 @@ client denied by server configuration:../var/www/html/post/form.html
 [error]
 [client 127.0.0.1 ]
 client denied by server configuration:../var/www/html/post/form.html
+
+[Date: Thursday, 12 Nov 2020 09:33:29 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/media/mainsite/images/award2.jpg
+
+[Date: Thursday, 12 Nov 2020 09:33:29 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/media/mainsite/images/award4.jpg
+
+[Date: Thursday, 12 Nov 2020 09:33:29 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/media/mainsite/images/award3.jpg
+
+[Date: Thursday, 12 Nov 2020 09:33:29 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/media/mainsite/images/n22.jpg
+
+[Date: Thursday, 12 Nov 2020 09:33:29 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/media/mainsite/images/n28.jpg
+
+[Date: Thursday, 12 Nov 2020 09:34:04 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Thursday, 12 Nov 2020 09:34:19 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Thursday, 12 Nov 2020 09:36:12 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Thursday, 12 Nov 2020 09:40:05 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Thursday, 12 Nov 2020 09:40:41 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
+
+[Date: Thursday, 12 Nov 2020 09:45:28 GMT
+[error]
+[client 127.0.0.1 ]
+client denied by server configuration:../var/www/html/favicon.ico
