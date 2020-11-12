@@ -1,117 +1,5 @@
-HTTP/1.1 400 Request Timeout
-Date: Thursday, 12 Nov 2020 07:12:50 GMT
-Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 309
-Content-Type: text/html; charset=iso-8859-1
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>408 Request Timeout</title>
-</head><body>
-<h1>Request Timeout</h1>
-<p>Request takes too much time to send<br />
-</p>
-<hr>
-<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
-</body></html>
-HTTP/1.1 400 Request Timeout
-Date: Thursday, 12 Nov 2020 07:15:19 GMT
-Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 309
-Content-Type: text/html; charset=iso-8859-1
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>408 Request Timeout</title>
-</head><body>
-<h1>Request Timeout</h1>
-<p>Request takes too much time to send<br />
-</p>
-<hr>
-<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
-</body></html>
-HTTP/1.1 400 Request Timeout
-Date: Thursday, 12 Nov 2020 07:18:21 GMT
-Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 309
-Content-Type: text/html; charset=iso-8859-1
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>408 Request Timeout</title>
-</head><body>
-<h1>Request Timeout</h1>
-<p>Request takes too much time to send<br />
-</p>
-<hr>
-<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
-</body></html>
-HTTP/1.1 400 Request Timeout
-Date: Thursday, 12 Nov 2020 07:24:17 GMT
-Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 309
-Content-Type: text/html; charset=iso-8859-1
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>408 Request Timeout</title>
-</head><body>
-<h1>Request Timeout</h1>
-<p>Request takes too much time to send<br />
-</p>
-<hr>
-<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
-</body></html>
-HTTP/1.1 400 Request Timeout
-Date: Thursday, 12 Nov 2020 07:26:31 GMT
-Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 309
-Content-Type: text/html; charset=iso-8859-1
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>408 Request Timeout</title>
-</head><body>
-<h1>Request Timeout</h1>
-<p>Request takes too much time to send<br />
-</p>
-<hr>
-<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
-</body></html>
 HTTP/1.1 401 Unauthorized
-Date: Thursday, 12 Nov 2020 07:26:35 GMT
-Server: Aditya-Roshan/1.0.0 (Cn)
-WWW-Authenticate: Basic realm=../var/www/html/post/form.html
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>400 Bad Request</title>
-</head><body>
-<h1>Bad Request</h1>
-<p>Your browser sent a request that this server could not understand.<br />
-</p>
-<hr>
-<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
-</body></html>
-
-HTTP/1.1 401 Unauthorized
-Date: Thursday, 12 Nov 2020 07:26:56 GMT
-Server: Aditya-Roshan/1.0.0 (Cn)
-WWW-Authenticate: Basic realm=../var/www/html/post/form.html
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>400 Bad Request</title>
-</head><body>
-<h1>Bad Request</h1>
-<p>Your browser sent a request that this server could not understand.<br />
-</p>
-<hr>
-<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
-</body></html>
-
-HTTP/1.1 401 Unauthorized
-Date: Thursday, 12 Nov 2020 21:02:19 GMT
+Date: Thursday, 12 Nov 2020 21:12:54 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
 WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
@@ -126,30 +14,10 @@ WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 <address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
 </body></html>
 
-HTTP/1.1 404 Bad Request
-Date: Thursday, 12 Nov 2020 21:12:54 GMT
-Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 333
-Connection: close
-Content-Type: text/html
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>400 Bad Request</title>
-</head><body>
-<h1>Bad Request</h1>
-<p>Your browser sent a request that this server could not understand.<br />
-</p>
-<hr>
-<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
-</body></html>
-
-HTTP/1.1 404 Bad Request
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:13:18 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 333
-Connection: close
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
@@ -162,12 +30,10 @@ Content-Type: text/html
 <address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
 </body></html>
 
-HTTP/1.1 404 Bad Request
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:14:05 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 333
-Connection: close
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
@@ -180,96 +46,106 @@ Content-Type: text/html
 <address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
 </body></html>
 
-HTTP/1.1 200 OK
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:16:23 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 0
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
-<!DOCTYPE html>
-<html>
-    <head>
-    <title></title>
-    </head>
-    <body>
-        <p>File deleted</p>
-    </body>
-</html>HTTP/1.1 200 OK
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:18:34 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 0
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
-<!DOCTYPE html>
-<html>
-    <head>
-    <title></title>
-    </head>
-    <body>
-        <p>File deleted</p>
-    </body>
-</html>HTTP/1.1 200 OK
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:21:25 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 0
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
-<!DOCTYPE html>
-<html>
-    <head>
-    <title></title>
-    </head>
-    <body>
-        <p>File deleted</p>
-    </body>
-</html>HTTP/1.1 200 OK
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:22:13 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 0
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
-<!DOCTYPE html>
-<html>
-    <head>
-    <title></title>
-    </head>
-    <body>
-        <p>File deleted</p>
-    </body>
-</html>HTTP/1.1 200 OK
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:29:48 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 0
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
-<!DOCTYPE html>
-<html>
-    <head>
-    <title></title>
-    </head>
-    <body>
-        <p>File deleted</p>
-    </body>
-</html>HTTP/1.1 200 OK
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:37:13 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 0
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
-<!DOCTYPE html>
-<html>
-    <head>
-    <title></title>
-    </head>
-    <body>
-        <p>File deleted</p>
-    </body>
-</html>HTTP/1.1 404 Bad Request
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:41:21 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 333
-Connection: close
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
@@ -282,12 +158,10 @@ Content-Type: text/html
 <address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
 </body></html>
 
-HTTP/1.1 404 Bad Request
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:42:05 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 333
-Connection: close
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
@@ -300,26 +174,10 @@ Content-Type: text/html
 <address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
 </body></html>
 
-HTTP/1.1 200 OK
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:43:06 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 0
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html>
-    <head>
-    <title></title>
-    </head>
-    <body>
-        <p>File deleted</p>
-    </body>
-</html>HTTP/1.1 404 Bad Request
-Date: Thursday, 12 Nov 2020 21:47:58 GMT
-Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 333
-Connection: close
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
@@ -332,12 +190,26 @@ Content-Type: text/html
 <address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
 </body></html>
 
-HTTP/1.1 404 Bad Request
+HTTP/1.1 401 Unauthorized
+Date: Thursday, 12 Nov 2020 21:47:58 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
 Date: Thursday, 12 Nov 2020 21:48:09 GMT
 Server: Aditya-Roshan/1.0.0 (Cn)
-Content-Length: 333
-Connection: close
-Content-Type: text/html
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
 
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>

@@ -1,0 +1,168 @@
+HTTP/1.1 401 Unauthorized
+Date: Thursday, 12 Nov 2020 20:44:10 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
+Date: Thursday, 12 Nov 2020 20:47:17 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
+Date: Thursday, 12 Nov 2020 20:47:17 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo.txt
+Date: Thursday, 12 Nov 2020 20:49:00 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo.txt
+Date: Thursday, 12 Nov 2020 20:49:00 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo.txt
+Date: Thursday, 12 Nov 2020 20:49:36 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo.txt
+Date: Thursday, 12 Nov 2020 20:49:36 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>
+
+HTTP/1.1 500 Internal Server Error
+Date: Thursday, 12 Nov 2020 20:51:35 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+Content-Length: 359
+Content-Type: text/html
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>501 NOT IMPLEMENTED</title>
+</head><body>
+<h1>We didn't recognize your request.</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo2.txt
+Date: Thursday, 12 Nov 2020 20:59:47 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo2.txt
+Date: Thursday, 12 Nov 2020 21:00:07 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>
+
+HTTP/1.1 500 Internal Server Error
+Date: Thursday, 12 Nov 2020 21:48:23 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+Content-Length: 359
+Content-Type: text/html
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>501 NOT IMPLEMENTED</title>
+</head><body>
+<h1>We didn't recognize your request.</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+

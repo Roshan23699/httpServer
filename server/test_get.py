@@ -11,7 +11,7 @@ from client import getClient, endClient
 class Test_GET(unittest.TestCase):
 	def test_status_code(self):
 		clientSocket = getClient()
-		sentence = "GET / \r\n\r\n"
+		sentence = "GET /lib.html \r\n\r\n"
 		clientSocket.send(sentence.encode())
 		response = clientSocket.recv(1024)
 		response = response.decode()
@@ -28,7 +28,7 @@ class Test_GET(unittest.TestCase):
 	
 	def test_get(self):
 		clientSocket = getClient()
-		sentence = "GET / HTTP/1.1\r\nHost: 127.0.0.1:12000\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.8) Gecko/20100101 Firefox/60.8\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\n\r\n"
+		sentence = "GET /lib.html HTTP/1.1\r\nHost: 127.0.0.1:12000\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.8) Gecko/20100101 Firefox/60.8\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\n\r\n"
 		clientSocket.send(sentence.encode())
 		response = clientSocket.recv(1024)
 		response = response.decode()

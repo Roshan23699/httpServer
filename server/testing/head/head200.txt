@@ -140,4 +140,260 @@ Content-Type: text/html
 		#notice th {
 			margin-top: 2px;
 			padding-top: 12px;
-	
+	HTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 20:34:04 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 12 Nov, 2020 04:41:42 GMT
+ETag: bd925f437f13043b02c8ce83a87c947a
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 13749
+Vary: Accept-Encoding
+Content-Type: text/html
+
+HTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 20:34:04 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 12 Nov, 2020 04:41:42 GMT
+ETag: bd925f437f13043b02c8ce83a87c947a
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 13749
+Vary: Accept-Encoding
+Content-Type: text/html
+
+HTTP/1.1 200 OK
+Date: Thursday, 12 Nov 2020 20:35:48 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 12 Nov, 2020 04:41:42 GMT
+ETag: "2aa6-59280a1a3740c"
+Accept-Ranges: bytes
+Content-Length: 13749
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        .heading {
+            padding: 2rem 1rem;
+            margin-bottom: 0em;
+            background-color: #e9ecef;
+            border-radius: .3rem;
+        }
+
+        .w-100 {
+            width: 100% !important;
+            height: 300px;
+        }
+
+        .nav-item {
+            border-right: #f0f2 1px solid;
+        }
+
+
+
+
+        #form-inside {
+            border: #f1f1 solid 1px;
+            padding: 10px;
+            border-radius: 2px;
+
+        }
+
+
+
+
+
+        .wrapper {
+            background: black;
+            padding-bottom: 20px;
+            color: white;
+
+        }
+
+        .wrapper a {
+            color: white;
+            text-decoration: solid;
+        }
+
+        #credits {
+        HTTP/1.1 200 OK
+Date: Thursday, 12 Nov 2020 20:38:50 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 12 Nov, 2020 04:41:42 GMT
+ETag: "2aa6-59280a1a3740c"
+Accept-Ranges: bytes
+Content-Length: 13749
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        .heading {
+            padding: 2rem 1rem;
+            margin-bottom: 0em;
+            background-color: #e9ecef;
+            border-radius: .3rem;
+        }
+
+        .w-100 {
+            width: 100% !important;
+            height: 300px;
+        }
+
+        .nav-item {
+            border-right: #f0f2 1px solid;
+        }
+
+
+
+
+        #form-inside {
+            border: #f1f1 solid 1px;
+            padding: 10px;
+            border-radius: 2px;
+
+        }
+
+
+
+
+
+        .wrapper {
+            background: black;
+            padding-bottom: 20px;
+            color: white;
+
+        }
+
+        .wrapper a {
+            color: white;
+            text-decoration: solid;
+        }
+
+        #credits {
+        HTTP/1.1 200 OK
+Date: Thursday, 12 Nov 2020 20:51:31 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 12 Nov, 2020 04:41:42 GMT
+ETag: "2aa6-59280a1a3740c"
+Accept-Ranges: bytes
+Content-Length: 13749
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        .heading {
+            padding: 2rem 1rem;
+            margin-bottom: 0em;
+            background-color: #e9ecef;
+            border-radius: .3rem;
+        }
+
+        .w-100 {
+            width: 100% !important;
+            height: 300px;
+        }
+
+        .nav-item {
+            border-right: #f0f2 1px solid;
+        }
+
+
+
+
+        #form-inside {
+            border: #f1f1 solid 1px;
+            padding: 10px;
+            border-radius: 2px;
+
+        }
+
+
+
+
+
+        .wrapper {
+            background: black;
+            padding-bottom: 20px;
+            color: white;
+
+        }
+
+        .wrapper a {
+            color: white;
+            text-decoration: solid;
+        }
+
+        #credits {
+        HTTP/1.1 200 OK
+Date: Thursday, 12 Nov 2020 21:49:00 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 12 Nov, 2020 04:41:42 GMT
+ETag: "2aa6-59280a1a3740c"
+Accept-Ranges: bytes
+Content-Length: 13749
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        .heading {
+            padding: 2rem 1rem;
+            margin-bottom: 0em;
+            background-color: #e9ecef;
+            border-radius: .3rem;
+        }
+
+        .w-100 {
+            width: 100% !important;
+            height: 300px;
+        }
+
+        .nav-item {
+            border-right: #f0f2 1px solid;
+        }
+
+
+
+
+        #form-inside {
+            border: #f1f1 solid 1px;
+            padding: 10px;
+            border-radius: 2px;
+
+        }
+
+
+
+
+
+        .wrapper {
+            background: black;
+            padding-bottom: 20px;
+            color: white;
+
+        }
+
+        .wrapper a {
+            color: white;
+            text-decoration: solid;
+        }
+
+        #credits {
+        

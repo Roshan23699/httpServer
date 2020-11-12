@@ -42,7 +42,7 @@ def test_PUT(no_of_requests_at_a_time):
 #stress test
 def test_DELETE(no_of_requests_at_a_time):
 	data = {'somekey': 'somevalue'}
-	url = 'http://127.0.0.1:12000/post/form.html'
+	url = 'http://127.0.0.1:12000/adminpermission/permission.html'
 	start = time()
 	for _ in range(no_of_requests_at_a_time):
 		new_thread = Thread(target=send_DELETE, args=[url, ])
@@ -52,7 +52,7 @@ def test_DELETE(no_of_requests_at_a_time):
 
 def test_POST(no_of_requests_at_a_time):
 	data = {'somekey': 'somevalue'}
-	url = 'http://127.0.0.1:12000/volim/'
+	url = 'http://127.0.0.1:12000/post/form.html'
 	start = time()
 	for _ in range(no_of_requests_at_a_time):
 		new_thread = Thread(target=send_POST, args=[url, data, ])
@@ -82,6 +82,7 @@ def send_DELETE(url):
 
 def send_PUT(url, data):
 	r = requests.put(url, data)
+	print(r)
 	r.close()
 	sys.exit()
 
@@ -147,7 +148,7 @@ if __name__ == "__main__":
 
 	# time = test_GET(100)
 	# print('time for 100 get requests' + ' :' + str(time))
-	time = test_HEAD(int(100))
+	# time = test_HEAD(int(100))
 	# print('time for 100 head requests' + ' :' + str(time))
 	# time += test_PUT(50)
 	# send_GET('http://127.0.0.1:12000/lib.html')
@@ -159,5 +160,7 @@ if __name__ == "__main__":
 	# time = test_DELETE(10)
 	# time = stress_test(30)
 	print(str(time))
+	send_PUT('http://127.0.0.1:12000/lib.html', data)
+
 
 	os._exit(0)

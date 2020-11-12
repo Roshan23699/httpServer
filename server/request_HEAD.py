@@ -11,7 +11,7 @@ from status_4XX import *
 from cookies import setCookie, checkCookie
 from Moved_Permanentely import MOVED_PERMANENTELY
 from status_3XX import moved_permanentely
-def request_GET(headers, client, addr, parser):
+def request_HEAD(headers, client, addr, parser):
     # response = "\n"
     response = ""
     if headers['request-uri'][len(headers['request-uri']) - 1] == "/":
