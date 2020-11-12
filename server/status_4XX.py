@@ -57,9 +57,7 @@ def not_found(headers, client, addr, parser):
     response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
     content_length = os.path.getsize(path)
     response += "Content-Length: " + str(content_length) + "\n"
-    #response += "Connection: close\n"
     response += "Content-Type: text/html; charset=iso-8859-1\n"
-    #print(find_value("Connection:", dict1))
     if headers['Connection'] != "keep-alive":
         response += "keep-alive: timeout=5, max=100\nConnection: Keep-Alive\n\n"
     else :

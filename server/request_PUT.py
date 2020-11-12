@@ -9,6 +9,7 @@ from status_5XX import *
 from status_4XX import *
 from authorization import authorize
 def request_PUT(headers, client, addr, parser, msg):
+    try:
         response = ""
         content_type = check_extention(headers['request-uri'])
         temp = headers['request-uri']
@@ -55,3 +56,5 @@ def request_PUT(headers, client, addr, parser, msg):
                     internal_server_error(headers, client, addr, parser)
         else:
             unauthorized(headers, client, addr, parser)
+    except:
+        internal_server_error(headers, client, addr, parser)

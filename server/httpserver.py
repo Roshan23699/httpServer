@@ -38,7 +38,7 @@ def response(client, addr, parser):
     else:
         bad_request(headers, client, addr, parser)
 
-    pprint.pprint(headers, width=160)
+    # pprint.pprint(headers, width=160)
     request(client, addr, parser, headers, msg)
     return
    
@@ -53,7 +53,6 @@ def timeout(client, addr, parser):
     server_response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
     content_length = os.path.getsize(path)
     server_response += "Content-Length: " + str(content_length) + "\n"
-    #response += "Connection: close\n"
     server_response += "Content-Type: text/html; charset=iso-8859-1\n\n"
     server_response  = server_response.encode()
     server_response += read_file(path, content_type)
@@ -84,7 +83,6 @@ if __name__ == "__main__":
     port = int(sys.argv[1])
     server_socket.bind(('', port))
     server_socket.listen(1)
-    #print("Server is ready to listen")
 
 
     while True:
@@ -94,14 +92,10 @@ if __name__ == "__main__":
             msg = str(datetime.datetime.now()) + " connection has recieved from ip " + str(addr[0]) + " on port " + str(addr[1])
             create_new_log(msg, parser.get('server', 'DebugLog'))
             new_client = threading.Thread(target=response, args=[client, addr, parser])
-            # new_client_timeout = threading.Thread(target=timeout, args=[client, addr, parser, ])
             new_client.daemon = True
-            # new_client_timeout.daemon = True
-            # new_client_timeout.start()
             new_client.start()
-            #new_client.join()
         except Exception or OSError as e:
             print(e)
         except KeyboardInterrupt:
-            #print("Server has been stopped forcefully")
+            print("Server has been stopped forcefully")
             sys.exit()

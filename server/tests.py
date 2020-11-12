@@ -129,38 +129,3 @@ class Test_GET(unittest.TestCase):
 	
 		pass
 
-
-if __name__ == "__main__":
-	#client for confirmance tests
-	from socket import *
-	serverName = '127.0.0.1'
-	serverPort = 12000
-	#clientPort = 12004
-	clientSocket = socket(AF_INET, SOCK_STREAM)
-	# clientSocket.bind((1, clientSocket));
-	#above commented lines resulted in error binding failed
-	clientSocket.connect((serverName,serverPort))
-	# sentence = raw_input('Input lowercase sentence:')
-	# clientSocket.send(sentence.encode())
-	# modifiedSentence = clientSocket.recv(1024)
-	# print('From Server: ', modifiedSentence.decode())
-	# clientSocket.close()
-
-	# time = test_GET(100)
-	# print('time for 100 get requests' + ' :' + str(time))
-	# time = test_HEAD(int(100))
-	# print('time for 100 head requests' + ' :' + str(time))
-	# time += test_PUT(50)
-	# send_GET('http://127.0.0.1:12000/lib.html')
-	# send_GET('http://127.0.0.1:12000/lib.html')
-	# send_GET('http://127.0.0.1:12000/lib.html')
-	# send_GET('http://127.0.0.1:12000/lib.html')
-	data = {'somekey': 'somevalue'}
-	# send_DELETE('http://127.0.0.1:12000/post/form.html')
-	# time = test_DELETE(10)
-	# time = stress_test(30)
-	print(str(time))
-	send_PUT('http://127.0.0.1:12000/lib.html', data)
-
-
-	os._exit(0)

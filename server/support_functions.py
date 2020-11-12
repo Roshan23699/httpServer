@@ -13,17 +13,7 @@ def find_body(msg):
     msg = msg.split('\r\n\r\n')
     # print(msg[1])
     return msg[1]
-#function to check headers and finding their values
-# def find_value(x, y):
-#     #x is the attribute of which value is to be found
-#     #y is the array in which the value to be found
-#     t = False
-#     for val in y:
-#         if t :
-#             return val
-#         if val == x:
-#             t = True
-#     return None
+
 
 
 #function to return the extention of the file
@@ -46,8 +36,6 @@ def read_file(f, type_of_file):
 
 
 def read_file_bytes(f, type_of_file, start, end):
-    #f is the file to be read
-    #type_of_file is the extention of file
         content = b""
         with open(f, "rb") as f:
             byte = f.read(1)
@@ -79,11 +67,6 @@ def check_header(msg):
 
         # construct a dictionary containing the headers
         headers = dict(message.items())
-        # print("\n\n\n\n")
-        # print(headers)
-        # print("\n\n\n\n")
-        # # pretty-print the dictionary of headers
-        # pprint.pprint(headers, width=160)
         return headers
     except Exception:
         return None

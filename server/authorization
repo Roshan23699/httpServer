@@ -1,8 +1,0 @@
-from socket import *
-import sys
-import os
-import datetime
-from support_functions import *
-from log_functions import *
-from authorization import check_auth
-def check_auth(dic)

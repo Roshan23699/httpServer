@@ -42,9 +42,6 @@ def checkCookie(headers):
 	#In the actual server lots of operations are to be performed like parsing cookie value as there can be multiple cookies but this server just checks if the cookie is set then just return true else false; this can be extended!
 	if('Cookie' in headers and headers['Cookie'] != None):
 		cookies = headers['Cookie'].split(';')
-		# print("\n\n\n")
-		# print(cookies)
-		# print("\n\n\n")
 		if 'user=12123' in cookies:
 			return True
 	return False

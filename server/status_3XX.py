@@ -14,7 +14,7 @@ from Moved_Permanentely import MOVED_PERMANENTELY
 
 def moved_permanentely(headers, client, addr, parser):
     path = parser.get('server','DocumentRoot')
-    path += "/error/error.html"
+    path += "/error/moved.html"
     response = ""
     response += "HTTP/1.1 301 Moved Permanentely\n"
     curr_time = datetime.datetime.now()
@@ -23,8 +23,6 @@ def moved_permanentely(headers, client, addr, parser):
     response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
     content_length = os.path.getsize(path)
     response += "Content-Length: " + str(content_length) + "\n"
-    # response += "Connection: close" + "\n"
-    # response += "Content-Type: " + content_type + "\n\n"
     response += "\n"
     response = response.encode()
     response += read_file(path, 'text/html')

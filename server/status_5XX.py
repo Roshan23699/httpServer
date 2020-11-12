@@ -33,7 +33,6 @@ def not_implemented(headers, client, addr, parser):
     last_modified = os.path.getmtime(path)
     content_length = os.path.getsize(path)
     response += "Content-Length: " + str(content_length) + "\n"
-    #content_type = find_value("Content-Type:", dict1)
     #to avoid any errors for now
     #fall through
     content_type = "text/html"
@@ -41,7 +40,6 @@ def not_implemented(headers, client, addr, parser):
     #response += requested_file.read();
     response = response.encode()
     response += read_file(path, content_type)
-    #requested_file.close()#no need of this statement any more
     client.send(response)
     error_log(client, addr, curr_time, headers, parser)
     if 'Connection' in headers and headers['Connection'] != "keep-alive":
@@ -59,15 +57,12 @@ def internal_server_error(headers, client, addr, parser):
     last_modified = os.path.getmtime(path)
     content_length = os.path.getsize(path)
     response += "Content-Length: " + str(content_length) + "\n"
-    #content_type = find_value("Content-Type:", dict1)
     #to avoid any errors for now
     #fall through
     content_type = "text/html"
     response += "Content-Type: " + content_type + "\n\n"
-    #response += requested_file.read();
     response = response.encode()
     response += read_file(path, content_type)
-    #requested_file.close()#no need of this statement any more
     client.send(response)
     error_log(client, addr, curr_time, headers, parser)
     if 'Connection' in headers and headers['Connection'] != "keep-alive":
@@ -86,15 +81,11 @@ def service_unvailable(headers, client, addr, parser):
     last_modified = os.path.getmtime(path)
     content_length = os.path.getsize(path)
     response += "Content-Length: " + str(content_length) + "\n"
-    #content_type = find_value("Content-Type:", dict1)
-    #to avoid any errors for now
     #fall through
     content_type = "text/html"
     response += "Content-Type: " + content_type + "\n\n"
-    #response += requested_file.read();
     response = response.encode()
     response += read_file(path, content_type)
-    #requested_file.close()#no need of this statement any more
     client.send(response)
     error_log(client, addr, curr_time, headers, parser)
     if 'Connection' in headers and  headers['Connection'] != "keep-alive":
