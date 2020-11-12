@@ -82,9 +82,12 @@ if __name__ == "__main__":
     server_socket = socket(AF_INET, SOCK_STREAM)
     server_socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
     port = int(sys.argv[1])
-    server_socket.bind(('', port))
-    server_socket.listen(1)
-    print("Server is ready to listen")
+    try :
+        server_socket.bind(('', port))
+        server_socket.listen(1)
+        print("Server is ready to listen")
+    except:
+        
 
 
     while True:
@@ -94,10 +97,7 @@ if __name__ == "__main__":
             msg = str(datetime.datetime.now()) + " connection has recieved from ip " + str(addr[0]) + " on port " + str(addr[1])
             create_new_log(msg, parser.get('server', 'DebugLog'))
             new_client = threading.Thread(target=response, args=[client, addr, parser])
-            # new_client_timeout = threading.Thread(target=timeout, args=[client, addr, parser, ])
             new_client.daemon = True
-            # new_client_timeout.daemon = True
-            # new_client_timeout.start()
             new_client.start()
             #new_client.join()
         except Exception or OSError as e:
