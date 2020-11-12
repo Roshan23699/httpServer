@@ -15,7 +15,8 @@ def error_log(client, addr, curr_time, headers, parser):
     errorlog = "[Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n"
     errorlog += "[error]\n"
     errorlog += "[client " + str(addr[0]) + " ]\n"
-    errorlog += "client denied by server configuration:" + headers['request-uri'] + '\n'
+    if headers:
+        errorlog += "client denied by server configuration:" + headers['request-uri'] + '\n'
     create_new_log(errorlog, parser.get('server', 'ErrorLog'))
 
 def custom_log(client, addr, curr_time, headers, parser, status_code, content_length):
