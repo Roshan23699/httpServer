@@ -1,7 +1,7 @@
 import os, signal, sys
 if __name__ == "__main__":
 	if(sys.argv[1] == "start"):
-		os.system("python3 httpserver.py 12000 > temp.txt &")
+		os.system("python3 httpserver.py 12000 &")
 	else :
 		for line in os.popen("ps -eaf | grep 12000 | grep -v grep"):  
 				fields = line.split() 
