@@ -130,13 +130,6 @@ class Test_GET(unittest.TestCase):
 
 
 if __name__ == "__main__":
-<<<<<<< HEAD
-	test_HEAD(1)
-	#time = test_GET(10)
-	#print(time)
-=======
-
->>>>>>> 3e6b747b5bdf188dfa245359828f055c17501076
 	#client for confirmance tests
 	from socket import *
 	serverName = '127.0.0.1'
@@ -151,12 +144,6 @@ if __name__ == "__main__":
 	# modifiedSentence = clientSocket.recv(1024)
 	# print('From Server: ', modifiedSentence.decode())
 	# clientSocket.close()
-<<<<<<< HEAD
-	#time = test_GET(300)
-	#print(time)
-	sys.exit(0)
-	
-=======
 
 	# time = test_GET(100)
 	# print('time for 100 get requests' + ' :' + str(time))
@@ -174,4 +161,3 @@ if __name__ == "__main__":
 	print(str(time))
 
 	os._exit(0)
->>>>>>> 3e6b747b5bdf188dfa245359828f055c17501076

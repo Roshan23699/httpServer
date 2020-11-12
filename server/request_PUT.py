@@ -7,13 +7,14 @@ from support_functions import *
 from log_functions import *
 from status_5XX import *
 from status_4XX import *
+from authorization import authorize
 def request_PUT(headers, client, addr, parser, msg):
         response = ""
         content_type = check_extention(headers['request-uri'])
         temp = headers['request-uri']
         headers['request-uri'] = parser.get('server','DocumentRoot')
         headers['request-uri'] += temp
-        if 'Authorization' in headers and check_credential(headers):
+        if 'Authorization' in headers and authorize(headers, client, addr, parser):
             if os.path.exists(headers['request-uri']):
                 if read_file(headers['request-uri'], '') == find_body(msg):
                     response = "HTTP/1.1 204 No Content\n"
@@ -26,7 +27,9 @@ def request_PUT(headers, client, addr, parser, msg):
                         response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
                         response += "\n"
                         response = response.encode()
+                        response += read_file('/var/www/html/filecreated.html', 'text/html')
                         client.send(response)
+                        # print("hello")
                         custom_log(client, addr, curr_time, headers, parser, '200', str(''))
                         if 'Connection' in headers and  headers['Connection'] != "keep-alive":
                             client.close()
@@ -42,6 +45,7 @@ def request_PUT(headers, client, addr, parser, msg):
                     response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
                     response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
                     response += "\n"
+                    response += read_file('/var/www/html/filecreated.html', 'text/html')
                     response = response.encode()
                     client.send(response)
                     custom_log(client, addr, curr_time, headers, parser, '200', str(content_length))

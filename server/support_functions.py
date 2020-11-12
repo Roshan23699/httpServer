@@ -10,7 +10,8 @@ from io import StringIO
 import status_5XX 
 #function to find the msg body of the request or even response if needed
 def find_body(msg):
-    msg.split('\n\n')
+    msg = msg.split('\r\n\r\n')
+    # print(msg[1])
     return msg[1]
 #function to check headers and finding their values
 # def find_value(x, y):
@@ -78,16 +79,6 @@ def check_header(msg):
 def config_parser():
       
     configur = ConfigParser() 
-    configur.read('../etc/Roshan-Aditya/roshanaditya.conf')
+    configur.read('/etc/Roshan-Aditya/roshanaditya.conf')
     return configur
 
-def check_credential(headers):
-    auth = headers['Authorization'].split()[1]
-    print(auth)
-    try:
-        if str(auth.decode()) in open('../etc/Roshan-Aditya/auth.conf').read() :
-            return True
-        else:
-            False
-    except:
-        return True
