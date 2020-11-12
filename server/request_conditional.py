@@ -5,6 +5,16 @@ import datetime
 from support_functions import *
 import hashlib 
 
+def conditional_if_range(headers):
+	if(conditional_check(headers)):
+		#considering the unit is bytes
+		if 'Range' in headers:
+			return True
+		else :
+			return False
+	else :
+		return False	
+
 def setCasheControl(response, maxAge):
 	response += "Cache-Control: max-age=" + str(maxAge) + "\n"
 	return response

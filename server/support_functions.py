@@ -44,6 +44,19 @@ def read_file(f, type_of_file):
                 byte = f.read(1)
         return content
 
+
+def read_file_bytes(f, type_of_file, start, end):
+    #f is the file to be read
+    #type_of_file is the extention of file
+        content = b""
+        with open(f, "rb") as f:
+            byte = f.read(1)
+            while byte != b"":
+                # Do stuff with byte.
+                content += byte
+                byte = f.read(1)
+        return content[start:end + 1]
+
 def write_file(f, content):
     #f is the file to be written
     #here the content is assumed to be binary

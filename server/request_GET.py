@@ -29,7 +29,11 @@ def request_GET(headers, client, addr, parser):
             #return 401 Unauthorized
             unauthorized(headers, client, addr, parser)
         else :
-            if conditional_check(headers):
+            if conditional_if_range(headers):
+                # response += "HTTP/1.1 206 Partial Content\n"
+                partial_content(headers, client, addr, parser)
+                return
+            elif conditional_check(headers):
             # if False:
                 response += "HTTP/1.1 304 Not Modified\n"
             else :
