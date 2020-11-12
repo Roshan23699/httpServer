@@ -84,7 +84,7 @@ if __name__ == "__main__":
     port = int(sys.argv[1])
     server_socket.bind(('', port))
     server_socket.listen(1)
-    print("Server is ready to listen")
+    #print("Server is ready to listen")
 
 
     while True:
@@ -103,5 +103,5 @@ if __name__ == "__main__":
         except Exception or OSError as e:
             print(e)
         except KeyboardInterrupt:
-            print("Server has been stopped forcefully")
+            #print("Server has been stopped forcefully")
             sys.exit()
