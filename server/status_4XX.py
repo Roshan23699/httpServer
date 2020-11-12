@@ -17,7 +17,7 @@ def unauthorized(headers, client, addr, parser):
     response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
     response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
     response += ("WWW-Authenticate: Basic realm=" + verification_details + "\n")
-    if headers['Connection'] != "keep-alive":
+    if 'Connection' in headers and headers['Connection'] != "keep-alive":
         response += "keep-alive: timeout=5, max=100\nConnection: Keep-Alive\n\n"
     else :
         response += "\n"

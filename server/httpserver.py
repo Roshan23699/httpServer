@@ -41,7 +41,7 @@ def response(client, addr, parser):
     return
    
 def timeout(client, addr, parser): 
-    time.sleep(3)
+    time.sleep(10)
     path = parser.get('server', 'DocumentRoot')
     path += "/error/timeout.html"
     content_type = check_extention(path)

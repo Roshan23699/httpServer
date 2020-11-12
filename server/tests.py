@@ -66,25 +66,30 @@ def test_POST(no_of_requests_at_a_time):
 def send_GET(url):
 	r = requests.get(url)
 	r.close()
+	sys.exit()
 
 
 def send_POST(url, data):
 	r = requests.post(url, data)
 	r.close()
+	sys.exit()
 
 def send_DELETE(url):
 	r = requests.delete(url)
 	r.close()
+	sys.exit()
 
 
 def send_PUT(url, data):
 	r = requests.put(url, data)
 	r.close()
+	sys.exit()
 
 
 def send_HEAD(url):
 	r = requests.head(url)
 	r.close()
+	sys.exit()
 
 
 
