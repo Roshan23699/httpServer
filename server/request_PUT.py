@@ -8,12 +8,21 @@ from log_functions import *
 from status_5XX import *
 from status_4XX import *
 def request_PUT(headers, client, addr, parser, msg):
+<<<<<<< HEAD
         response = "\n"
         content_type = check_extention(headers['request-uri'])
         temp = headers['request-uri']
         headers['request-uri'] = parser.get('server','DocumentRoot')
         headers['request-uri'] += temp
         if 'Authorization' in headers and check_credential(headers):
+=======
+            response = ""
+            content_type = check_extention(headers['request-uri'])
+            temp = headers['request-uri']
+            headers['request-uri'] = parser.get('server','DocumentRoot')
+            headers['request-uri'] += temp
+
+>>>>>>> 3e6b747b5bdf188dfa245359828f055c17501076
             if os.path.exists(headers['request-uri']):
                 if read_file(headers['request-uri'], '') == find_body(msg):
                     response = "HTTP/1.1 204 No Content\n"

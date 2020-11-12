@@ -84,7 +84,10 @@ def config_parser():
 def check_credential(headers):
     auth = headers['Authorization'].split()[1]
     print(auth)
-    if str(auth.decode()) in open('../etc/Roshan-Aditya/auth.conf').read() :
+    try:
+        if str(auth.decode()) in open('../etc/Roshan-Aditya/auth.conf').read() :
+            return True
+        else:
+            False
+    except:
         return True
-    else:
-        False

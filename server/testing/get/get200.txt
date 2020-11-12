@@ -1,0 +1,857 @@
+HTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:32:50 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:36:43 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected link */
+		#notice	a:active {
+			color: yellow;
+		}
+
+
+
+
+		#notice th {
+			margin-top: 2px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #333;
+			color: #fff;
+		}
+
+
+
+
+		#middle {
+			background: white;
+			border-radius: 10px;
+			border: 2px #f1f1f1 solid;
+			box-shadow: 2px 2px 2px white inset;
+			padding: 20px;
+			;
+			margin-bottom: 10px;
+		}
+
+		.heading {
+			padding: 2rem 1rem;
+			margin-bottom: 0em;
+			background-color: #e9ecef;
+			border-radius: .3rem;
+		}
+
+		.w-100 {
+			width: 100% !important;
+			height: 300px;
+		}
+
+		.nav-item {
+			border-right: #f0f2 1px solid;
+		}
+
+
+
+
+		#form-inside {
+			border: #f1f1 solid 1px;
+			padding: 10px;
+			padding-bottom: 0px;
+			border-radius: 0px 0px 9px 9px;
+
+		}
+
+
+
+
+
+
+		.wrapper {
+			background: black;
+			padding-bottom: 20px;
+			color: white;
+
+		}
+
+		.wrapper a {
+			color: white;
+			text-decoration: solid;
+		}
+
+		#credits {
+			text-align: center;
+			color: rHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:40:06 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:40:17 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:40:44 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:41:03 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:41:03 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:41:36 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:41:36 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:42:36 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:42:36 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:47:15 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:47:15 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:52:13 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 06:52:13 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 22 Oct, 2020 09:03:11 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected link

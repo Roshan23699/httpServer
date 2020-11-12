@@ -11,13 +11,13 @@ def unauthorized(headers, client, addr, parser):
     path = parser.get('server','DocumentRoot')
     path += "/error/error.html"
     verification_details = parser.get('server','DocumentRoot') + "/post/form.html"
-    response = "\n"
+    response = ""
     response += "HTTP/1.1 401 Unauthorized\n"
     curr_time = datetime.datetime.now()
     response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
     response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
     response += ("WWW-Authenticate: Basic realm=" + verification_details + "\n")
-    if headers['Connection'] != "keep-alive":
+    if 'Connection' in headers and headers['Connection'] != "keep-alive":
         response += "keep-alive: timeout=5, max=100\nConnection: Keep-Alive\n\n"
     else :
         response += "\n"
@@ -32,7 +32,7 @@ def unauthorized(headers, client, addr, parser):
 def bad_request(headers, client, addr, parser):
     path = parser.get('server','DocumentRoot')
     path += "/error/error.html"
-    response = "\n"
+    response = ""
     response += "HTTP/1.1 404 Bad Request\n"
     curr_time = datetime.datetime.now()
     response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
@@ -44,8 +44,8 @@ def bad_request(headers, client, addr, parser):
     response = response.encode()
     response += read_file(path, 'text/html')
     client.send(response)
-    error_log(client, addr, curr_time, headers, parser)
     client.close()
+    error_log(client, addr, curr_time, headers, parser)
 
 def not_found(headers, client, addr, parser):
     path = parser.get('server','DocumentRoot')

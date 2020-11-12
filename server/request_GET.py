@@ -12,8 +12,9 @@ from cookies import setCookie, checkCookie
 from Moved_Permanentely import MOVED_PERMANENTELY
 from status_3XX import moved_permanentely
 def request_GET(headers, client, addr, parser):
-    response = "\n"
-    if headers['request-uri'] == "/":
+    # response = "\n"
+    response = ""
+    if headers['request-uri'][len(headers['request-uri']) - 1] == "/":
         headers['request-uri'] += "index.html"
     if(headers['request-uri'] in MOVED_PERMANENTELY):
         moved_permanentely(headers, client, addr, parser)

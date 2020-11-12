@@ -6,7 +6,7 @@ from configparser import ConfigParser
 from support_functions import *
 from status_4XX import *
 def request_HEAD(headers, client, addr, parser):
-            response = "\n"
+            response = ""
             if headers['request-uri'] == "/":
                 headers['request-uri'] += "index.html"
             #check the extention of the file to be sent
