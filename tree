@@ -1,0 +1,318 @@
+.
+├── etc
+│   └── Roshan-Aditya
+│       ├── auth.conf
+│       └── roshanaditya.conf
+├── manage.sh
+├── README.md
+├── server
+│   ├── authorization
+│   ├── authorization.py
+│   ├── client.py
+│   ├── cookies.py
+│   ├── geckodriver.log
+│   ├── httpserver.py
+│   ├── log_functions.py
+│   ├── manage.py
+│   ├── Moved_Permanentely.py
+│   ├── practice.py
+│   ├── __pycache__
+│   │   ├── authorization.cpython-36.pyc
+│   │   ├── authorization.cpython-38.pyc
+│   │   ├── client.cpython-36.pyc
+│   │   ├── cookies.cpython-36.pyc
+│   │   ├── cookies.cpython-38.pyc
+│   │   ├── log_functions.cpython-36.pyc
+│   │   ├── log_functions.cpython-38.pyc
+│   │   ├── Moved_Permanentely.cpython-36.pyc
+│   │   ├── Moved_Permanentely.cpython-38.pyc
+│   │   ├── request_conditional.cpython-36.pyc
+│   │   ├── request_conditional.cpython-38.pyc
+│   │   ├── request_DELETE.cpython-36.pyc
+│   │   ├── request_DELETE.cpython-38.pyc
+│   │   ├── request_GET.cpython-36.pyc
+│   │   ├── request_GET.cpython-38.pyc
+│   │   ├── request_HEAD.cpython-36.pyc
+│   │   ├── request_HEAD.cpython-38.pyc
+│   │   ├── request_POST.cpython-36.pyc
+│   │   ├── request_POST.cpython-38.pyc
+│   │   ├── request_PUT.cpython-36.pyc
+│   │   ├── request_PUT.cpython-38.pyc
+│   │   ├── status_3XX.cpython-36.pyc
+│   │   ├── status_3XX.cpython-38.pyc
+│   │   ├── status_4XX.cpython-36.pyc
+│   │   ├── status_4XX.cpython-38.pyc
+│   │   ├── status_5XX.cpython-36.pyc
+│   │   ├── status_5XX.cpython-38.pyc
+│   │   ├── support_functions.cpython-36.pyc
+│   │   ├── support_functions.cpython-38.pyc
+│   │   └── tests.cpython-36.pyc
+│   ├── request_conditional.py
+│   ├── request_DELETE.py
+│   ├── request_GET.py
+│   ├── request_HEAD.py
+│   ├── request_POST.py
+│   ├── request_PUT.py
+│   ├── status_3XX.py
+│   ├── status_4XX.py
+│   ├── status_5XX.py
+│   ├── support_functions.py
+│   ├── temp.txt
+│   ├── test_delete.py
+│   ├── test_get.py
+│   ├── test_head
+│   ├── test_head.py
+│   ├── testing
+│   │   ├── delete
+│   │   │   └── delete200.txt
+│   │   ├── get
+│   │   │   └── get200.txt
+│   │   ├── head
+│   │   │   └── head200.txt
+│   │   ├── post
+│   │   │   └── post200.txt
+│   │   └── put
+│   │       └── put200.txt
+│   ├── test_post.py
+│   ├── test_put.py
+│   └── tests.py
+├── temp.txt
+├── tree
+└── var
+    ├── log
+    │   └── Roshan-Aditya
+    │       ├── access.log
+    │       ├── debug.log
+    │       ├── error.log
+    │       └── post.log
+    └── www
+        └── html
+            ├── 5XX
+            │   ├── internal_server_error.html
+            │   └── not_implemented.html
+            ├── academic.html
+            ├── academicreportmobile.html
+            ├── achievements.html
+            ├── adminpermission
+            │   ├── permission.html
+            │   └── random.html
+            ├── age.html
+            ├── award1.jpg
+            ├── award2.jpg
+            ├── award3.jpg
+            ├── award4.jpg
+            ├── chess.jpg
+            ├── complab.html
+            ├── css
+            │   └── test.css
+            ├── error
+            │   ├── error.html
+            │   ├── notfound.html
+            │   └── timeout.html
+            ├── feedback.html
+            ├── filedeleted.html
+            ├── geninfo.html
+            ├── homework.html
+            ├── hostel.html
+            ├── index.html
+            ├── infra.html
+            ├── jack
+            │   ├── about.html
+            │   ├── blog.html
+            │   ├── contact.html
+            │   ├── css
+            │   │   ├── animate.min.css
+            │   │   ├── bootstrap.min.css
+            │   │   ├── font-awesome.min.css
+            │   │   ├── jquery.fancybox.min.css
+            │   │   ├── jquery.mCustomScrollbar.min.css
+            │   │   ├── jquery-ui.css
+            │   │   ├── meanmenu.css
+            │   │   ├── nice-select.css
+            │   │   ├── normalize.css
+            │   │   ├── owl.carousel.min.css
+            │   │   ├── responsive.css
+            │   │   ├── slick.css
+            │   │   └── style.css
+            │   ├── fonts
+            │   │   ├── FontAwesome.otf
+            │   │   ├── fontawesome-webfont.eot
+            │   │   ├── fontawesome-webfont.svg
+            │   │   ├── fontawesome-webfont.ttf
+            │   │   ├── fontawesome-webfont.woff
+            │   │   └── fontawesome-webfont.woff2
+            │   ├── images
+            │   │   ├── banner_bg.png
+            │   │   ├── blog_1.png
+            │   │   ├── blog1.png
+            │   │   ├── blog2.png
+            │   │   ├── c_1.png
+            │   │   ├── c_2.png
+            │   │   ├── fevicon.png
+            │   │   ├── footer_blog.png
+            │   │   ├── footer_logo.png
+            │   │   ├── head_d.png
+            │   │   ├── loading.gif
+            │   │   ├── location_icon.png
+            │   │   ├── logo.png
+            │   │   ├── mail_icon.png
+            │   │   ├── maps-and-flags.png
+            │   │   ├── marketing_img.png
+            │   │   ├── phone_icon.png
+            │   │   ├── search_icon.png
+            │   │   └── slider_1.png
+            │   ├── index.html
+            │   ├── js
+            │   │   ├── bootstrap.bundle.min.js
+            │   │   ├── custom.js
+            │   │   ├── jquery-3.0.0.min.js
+            │   │   ├── jquery.mCustomScrollbar.concat.min.js
+            │   │   ├── jquery.min.js
+            │   │   ├── jquery.validate.js
+            │   │   ├── plugin.js
+            │   │   └── popper.min.js
+            │   └── marketing.html
+            ├── lib.html
+            ├── location.html
+            ├── logo.jpg
+            ├── n12.jpg
+            ├── n21.jpg
+            ├── n22.jpg
+            ├── n27.jpg
+            ├── n28.jpg
+            ├── name.jpg
+            ├── new.html
+            ├── news.html
+            ├── nn1.html
+            ├── nn2.html
+            ├── others.html
+            ├── passport.jpg
+            ├── personalInfo.html
+            ├── post
+            │   ├── demo.txt
+            │   └── form.html
+            ├── prmsg.html
+            ├── procedure.html
+            ├── README.md
+            ├── report.html
+            ├── results.html
+            ├── school.jpg
+            ├── scilab.html
+            ├── sctu.html
+            ├── styles.css
+            ├── t.html
+            ├── update.html
+            ├── videolec.html
+            ├── volim
+            │   ├── css
+            │   │   ├── bootstrap.min.css
+            │   │   ├── fontawesome.min.css
+            │   │   └── style.css
+            │   ├── imgs
+            │   │   ├── arrow_1.png
+            │   │   ├── d1.jpg
+            │   │   ├── d2.jpg
+            │   │   ├── d3.jpg
+            │   │   ├── d4.jpg
+            │   │   ├── d5.jpg
+            │   │   ├── fb.png
+            │   │   ├── footer_logo.png
+            │   │   ├── gitar.jpg
+            │   │   ├── gp.png
+            │   │   ├── img_layout.jpg
+            │   │   ├── in.png
+            │   │   ├── location.png
+            │   │   ├── logo.png
+            │   │   ├── mail_icon.png
+            │   │   ├── map_img.jpg
+            │   │   ├── oh.jpg
+            │   │   ├── phone_icon.png
+            │   │   ├── slider1.jpg
+            │   │   ├── tw.png
+            │   │   └── v1.jpg
+            │   ├── index.html
+            │   ├── js
+            │   │   ├── bootstrap.min.js
+            │   │   └── jquery-3.3.1.min.js
+            │   └── webfonts
+            │       ├── fa-brands-400.eot
+            │       ├── fa-brands-400.svg
+            │       ├── fa-brands-400.ttf
+            │       ├── fa-brands-400.woff
+            │       ├── fa-brands-400.woff2
+            │       ├── fa-regular-400.eot
+            │       ├── fa-regular-400.svg
+            │       ├── fa-regular-400.ttf
+            │       ├── fa-regular-400.woff
+            │       ├── fa-regular-400.woff2
+            │       ├── fa-solid-900.eot
+            │       ├── fa-solid-900.svg
+            │       ├── fa-solid-900.ttf
+            │       ├── fa-solid-900.woff
+            │       └── fa-solid-900.woff2
+            └── well
+                ├── css
+                │   ├── bootstrap.min.css
+                │   └── templatemo-style.css
+                ├── fontawesome-5.5
+                │   ├── css
+                │   │   └── all.min.css
+                │   ├── LICENSE.txt
+                │   └── webfonts
+                │       ├── fa-brands-400.eot
+                │       ├── fa-brands-400.svg
+                │       ├── fa-brands-400.ttf
+                │       ├── fa-brands-400.woff
+                │       ├── fa-brands-400.woff2
+                │       ├── fa-regular-400.eot
+                │       ├── fa-regular-400.svg
+                │       ├── fa-regular-400.ttf
+                │       ├── fa-regular-400.woff
+                │       ├── fa-regular-400.woff2
+                │       ├── fa-solid-900.eot
+                │       ├── fa-solid-900.svg
+                │       ├── fa-solid-900.ttf
+                │       ├── fa-solid-900.woff
+                │       └── fa-solid-900.woff2
+                ├── img
+                │   ├── gallery-img-01.jpg
+                │   ├── gallery-img-02.jpg
+                │   ├── gallery-img-03.jpg
+                │   ├── gallery-img-04.jpg
+                │   ├── gallery-img-05.jpg
+                │   ├── gallery-img-06.jpg
+                │   ├── gallery-tn-01.jpg
+                │   ├── gallery-tn-02.jpg
+                │   ├── gallery-tn-03.jpg
+                │   ├── gallery-tn-04.jpg
+                │   ├── gallery-tn-05.jpg
+                │   ├── gallery-tn-06.jpg
+                │   ├── the-town-01.jpg
+                │   ├── the-town-bg-01.jpg
+                │   └── the-town-bg-02.jpg
+                ├── index.html
+                ├── js
+                │   ├── bootstrap.min.js
+                │   ├── jquery-1.9.1.min.js
+                │   └── jquery.singlePageNav.min.js
+                ├── magnific-popup
+                │   ├── jquery.magnific-popup.min.js
+                │   └── magnific-popup.css
+                └── slick
+                    ├── ajax-loader.gif
+                    ├── config.rb
+                    ├── fonts
+                    │   ├── slick.eot
+                    │   ├── slick.svg
+                    │   ├── slick.ttf
+                    │   └── slick.woff
+                    ├── slick.css
+                    ├── slick.js
+                    ├── slick.less
+                    ├── slick.min.js
+                    ├── slick.scss
+                    ├── slick-theme.css
+                    ├── slick-theme.less
+                    └── slick-theme.scss
+
+40 directories, 275 files

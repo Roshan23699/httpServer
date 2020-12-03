@@ -958,6 +958,7 @@ Content-Type: text/html
 			color: red;
 		}
 
+<<<<<<< HEAD
 		/* selected linkHTTP/1.1 200 OK
 Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
 Date: Thursday, 12 Nov 2020 11:56:19 GMT
@@ -1063,3 +1064,61 @@ Content-Type: text/html
 		}
 
 		/* selected link *
+=======
+		/* selected linkHTTP/1.1 401 Unauthorized
+Date: Thursday, 12 Nov 2020 20:31:47 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 401 Unauthorized
+Date: Thursday, 12 Nov 2020 20:31:47 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+WWW-Authenticate: Basic realm='Access to the staging site', charset='UTF-8'
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Aditya-Roshan/1.0.0 (Cn) Server at 2409:4042:2416:592b:5b1:5ff1:4412:fa4a Port 80</address>
+</body></html>
+
+HTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 20:32:38 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 12 Nov, 2020 04:41:42 GMT
+ETag: bd925f437f13043b02c8ce83a87c947a
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 13749
+Vary: Accept-Encoding
+Content-Type: text/html
+
+HTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 20:32:38 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 12 Nov, 2020 04:41:42 GMT
+ETag: bd925f437f13043b02c8ce83a87c947a
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 13749
+Vary: Accept-Encoding
+Content-Type: text/html
+
+>>>>>>> 377f705074ad44231989d4d49ba8472138b420d6

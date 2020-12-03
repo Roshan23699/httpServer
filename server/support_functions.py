@@ -10,19 +10,10 @@ from io import StringIO
 import status_5XX 
 #function to find the msg body of the request or even response if needed
 def find_body(msg):
-    msg.split('\n\n')
+    msg = msg.split('\r\n\r\n')
+    # print(msg[1])
     return msg[1]
-#function to check headers and finding their values
-# def find_value(x, y):
-#     #x is the attribute of which value is to be found
-#     #y is the array in which the value to be found
-#     t = False
-#     for val in y:
-#         if t :
-#             return val
-#         if val == x:
-#             t = True
-#     return None
+
 
 
 #function to return the extention of the file
@@ -43,6 +34,17 @@ def read_file(f, type_of_file):
                 content += byte
                 byte = f.read(1)
         return content
+
+
+def read_file_bytes(f, type_of_file, start, end):
+        content = b""
+        with open(f, "rb") as f:
+            byte = f.read(1)
+            while byte != b"":
+                # Do stuff with byte.
+                content += byte
+                byte = f.read(1)
+        return content[start:end + 1]
 
 def write_file(f, content):
     #f is the file to be written
@@ -66,11 +68,6 @@ def check_header(msg):
 
         # construct a dictionary containing the headers
         headers = dict(message.items())
-        # print("\n\n\n\n")
-        # print(headers)
-        # print("\n\n\n\n")
-        # # pretty-print the dictionary of headers
-        # pprint.pprint(headers, width=160)
         return headers
     except Exception:
         return None
@@ -82,13 +79,3 @@ def config_parser():
     configur.read('/etc/Roshan-Aditya/roshanaditya.conf')
     return configur
 
-def check_credential(headers):
-    auth = headers['Authorization'].split()[1]
-    print(auth)
-    try:
-        if str(auth.decode()) in open('../etc/Roshan-Aditya/auth.conf').read() :
-            return True
-        else:
-            False
-    except:
-        return True

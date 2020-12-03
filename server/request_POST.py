@@ -5,7 +5,9 @@ import datetime
 from configparser import ConfigParser
 from support_functions import *
 from log_functions import *
+from status_4XX import *
 def request_POST(headers, client, addr, parser, msg):
+    try:
             #create the requested resource
             #find the msg body
             create_new_log(msg, parser.get('server', 'PostLog'))
@@ -45,4 +47,5 @@ def request_POST(headers, client, addr, parser, msg):
                     client.close()
             else :
                 not_found(headers, client, addr, parser)
-             
+    except:
+        internal_server_error(headers, client, addr, parser)

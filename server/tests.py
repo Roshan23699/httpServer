@@ -42,7 +42,7 @@ def test_PUT(no_of_requests_at_a_time):
 #stress test
 def test_DELETE(no_of_requests_at_a_time):
 	data = {'somekey': 'somevalue'}
-	url = 'http://127.0.0.1:12000/post/form.html'
+	url = 'http://127.0.0.1:12000/adminpermission/permission.html'
 	start = time()
 	for _ in range(no_of_requests_at_a_time):
 		new_thread = Thread(target=send_DELETE, args=[url, ])
@@ -52,7 +52,7 @@ def test_DELETE(no_of_requests_at_a_time):
 
 def test_POST(no_of_requests_at_a_time):
 	data = {'somekey': 'somevalue'}
-	url = 'http://127.0.0.1:12000/volim/'
+	url = 'http://127.0.0.1:12000/post/form.html'
 	start = time()
 	for _ in range(no_of_requests_at_a_time):
 		new_thread = Thread(target=send_POST, args=[url, data, ])
@@ -82,6 +82,7 @@ def send_DELETE(url):
 
 def send_PUT(url, data):
 	r = requests.put(url, data)
+	print(r)
 	r.close()
 	sys.exit()
 
@@ -128,6 +129,7 @@ class Test_GET(unittest.TestCase):
 	
 		pass
 
+<<<<<<< HEAD
 
 if __name__ == "__main__":
 	#client for confirmance tests
@@ -161,3 +163,5 @@ if __name__ == "__main__":
 	print(str(time))
 
 	os._exit(0)
+=======
+>>>>>>> 377f705074ad44231989d4d49ba8472138b420d6

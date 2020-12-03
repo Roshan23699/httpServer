@@ -1,0 +1,56 @@
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo2.txt
+Date: Thursday, 12 Nov 2020 20:51:35 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo2.txt
+Date: Thursday, 12 Nov 2020 20:59:47 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo2.txt
+Date: Thursday, 12 Nov 2020 21:00:07 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>
+HTTP/1.1 200 OK
+Content-Location: /var/www/html/post/demo2.txt
+Date: Thursday, 12 Nov 2020 21:48:23 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        <p>File created</p>
+    </body>
+</html>

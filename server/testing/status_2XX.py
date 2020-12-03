@@ -4,33 +4,30 @@ import os
 import datetime
 from support_functions import *
 from threading import Thread
-from request_conditional import *
 from log_functions import *
-from authorization import CHECK_AUTH, authorize
-from status_4XX import *
-from cookies import setCookie, checkCookie
-from Moved_Permanentely import MOVED_PERMANENTELY
 
 
-def moved_permanentely(headers, client, addr, parser):
+
+
+
+def conditional_if_range(headers):
     path = parser.get('server','DocumentRoot')
-<<<<<<< HEAD
-    path += "/error/movedpermanentely.html"
-    response = "\n"
-=======
-    path += "/error/moved.html"
+    path += headers['request-uri']
     response = ""
->>>>>>> 377f705074ad44231989d4d49ba8472138b420d6
-    response += "HTTP/1.1 301 Moved Permanentely\n"
+    response += "HTTP/1.1 206 Partial Content\n"
     curr_time = datetime.datetime.now()
     response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
     response += ("Location: " + MOVED_PERMANENTELY[headers['request-uri']]) + "\n"
     response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
-    content_length = os.path.getsize(path)
+
+    bytes_range = headers['Range'].split("=")[1].split('-')
+    content_length = bytes_ranges[1] - bytes_ranges[0] + 1
     response += "Content-Length: " + str(content_length) + "\n"
+    content_length = os.path.getsize(path)
+    response += "Content-Type: " + content_type + "\n\n"
     response += "\n"
     response = response.encode()
-    response += read_file(path, 'text/html')
+    response += read_file_bytes(path, 'text/html', bytes_range[0], bytes_range[1])
     client.send(response)
-    error_log(client, addr, curr_time, headers, parser)
+    access_log(client, addr, curr_time, headers, parser)
     client.close()

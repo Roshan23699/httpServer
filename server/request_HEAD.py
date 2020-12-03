@@ -2,27 +2,50 @@ from socket import *
 import sys
 import os
 import datetime
-from configparser import ConfigParser
 from support_functions import *
+from threading import Thread
+from request_conditional import *
+from log_functions import *
+from authorization import CHECK_AUTH, authorize
 from status_4XX import *
+from cookies import setCookie, checkCookie
+from Moved_Permanentely import MOVED_PERMANENTELY
+from status_3XX import moved_permanentely
 def request_HEAD(headers, client, addr, parser):
-            response = ""
-            if headers['request-uri'] == "/":
-                headers['request-uri'] += "index.html"
-            #check the extention of the file to be sent
-            content_type = check_extention(headers['request-uri'])
-            temp = headers['request-uri']
-            headers['request-uri'] = parser.get('server', 'DocumentRoot')
-            headers['request-uri'] += temp
+    try:
+        response = ""
+        if headers['request-uri'][len(headers['request-uri']) - 1] == "/":
+            headers['request-uri'] += "index.html"
+        if(headers['request-uri'] in MOVED_PERMANENTELY):
+            moved_permanentely(headers, client, addr, parser)
+        #check the extention of the file to be sent
+        content_type = check_extention(headers['request-uri'])
+        temp = headers['request-uri']
+        headers['request-uri'] = parser.get('server', 'DocumentRoot')
+        headers['request-uri'] += temp
 
-            if os.path.exists(headers['request-uri']):
-                response += "HTTP/1.1 200 OK\n"
+        if os.path.exists(headers['request-uri']):
+            if(headers['request-uri'] in CHECK_AUTH and not authorize(headers, client, addr, parser)):
+                #return 401 Unauthorized
+                unauthorized(headers, client, addr, parser)
+            else :
+                if conditional_check(headers):
+                    response += "HTTP/1.1 304 Not Modified\n"
+                else :
+                    response += "HTTP/1.1 200 OK\n"
+                if checkCookie(headers):
+                    
+                    pass
+                else :
+                    response = setCookie(response)
                 curr_time = datetime.datetime.now()
                 response += ("Date: " + curr_time.strftime("%A") + ", "+ curr_time.strftime("%d") + " " +  curr_time.strftime("%b") + " " + curr_time.strftime("%Y") + " " + curr_time.strftime("%X") + " GMT\n")
                 response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
                 last_modified = os.path.getmtime(headers['request-uri'])
                 response += ("last-Modified: " + datetime.datetime.fromtimestamp(last_modified).strftime("%A, %d %b, %Y %I:%M:%S")+ " GMT\n")
-                response += 'ETag: "2aa6-59280a1a3740c"\n'
+                if not 'If-None-Match' in headers:
+                    response += 'ETag: ' + etag(headers['request-uri']) + '\n'
+                    response = setCasheControl(response, maxAge=10)
                 response += "Accept-Ranges: bytes\n"
                 content_length = os.path.getsize(headers['request-uri'])
                 response += "Content-Length: " + str(content_length) + "\n"
@@ -31,13 +54,20 @@ def request_HEAD(headers, client, addr, parser):
                     content_type = "text/html"
                 if 'Accept' in headers:
                     if not ('*/*' in headers['Accept']  or content_type in headers['Accept']):
-                        bad_request(headers, client, addr, parser)
-                response += "Content-Type: " + content_type + "\n\n"
-                response = response.encode()
+                        bad_request(headers,client, addr, parser)
+                response += "Content-Type: " + content_type + "\n"
+                if 'Connection' in headers and headers['Connection'] != "keep-alive":
+                    response += "keep-alive: timeout=5, max=100\nConnection: Keep-Alive\n\n"
+                else :
+                    response += "\n"
+                response  = response.encode()
                 client.send(response)
-                custom_log(client, addr, curr_time, headers, parser, '200', '-')
-                if 'Connection' in headers and  headers['Connection'] != "keep-alive":
-                        client.close()
-            else :
-                not_found(headers, client, addr, parser)
-              
+                custom_log(client, addr, curr_time, headers, parser, '200', str(content_length))
+                if 'Connection' in headers and headers['Connection'] != "keep-alive":
+                        client.close()  
+                        
+        else :
+            not_found(headers, client, addr, parser)
+                
+    except:
+        internal_server_error(headers, client, addr, parser)        

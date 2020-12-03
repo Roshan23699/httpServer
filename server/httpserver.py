@@ -4,7 +4,7 @@ import os
 import datetime
 from configparser import ConfigParser
 from request_GET import request_GET
-from request_HEAD import request_HEAD
+from request_HEAD import *
 from request_DELETE import request_DEL
 from request_POST import *
 from status_5XX import *
@@ -37,7 +37,7 @@ def response(client, addr, parser):
     else:
         bad_request(headers, client, addr, parser)
 
-    pprint.pprint(headers, width=160)
+    # pprint.pprint(headers, width=160)
     request(client, addr, parser, headers, msg)
     return
    
@@ -52,7 +52,6 @@ def timeout(client, addr, parser):
     server_response += "Server: Aditya-Roshan/1.0.0 (Cn)\n"
     content_length = os.path.getsize(path)
     server_response += "Content-Length: " + str(content_length) + "\n"
-    #response += "Connection: close\n"
     server_response += "Content-Type: text/html; charset=iso-8859-1\n\n"
     server_response  = server_response.encode()
     server_response += read_file(path, content_type)
@@ -81,12 +80,17 @@ if __name__ == "__main__":
     server_socket = socket(AF_INET, SOCK_STREAM)
     server_socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
     port = int(sys.argv[1])
+<<<<<<< HEAD
     try :
         server_socket.bind(('', port))
         server_socket.listen(1)
         print("Server is ready to listen")
     except:
         print("Can not bind to port")
+=======
+    server_socket.bind(('', port))
+    server_socket.listen(1)
+>>>>>>> 377f705074ad44231989d4d49ba8472138b420d6
 
 
     while True:
@@ -98,7 +102,6 @@ if __name__ == "__main__":
             new_client = threading.Thread(target=response, args=[client, addr, parser])
             new_client.daemon = True
             new_client.start()
-            #new_client.join()
         except Exception or OSError as e:
             print(e)
         except KeyboardInterrupt:
