@@ -34,6 +34,7 @@ def check_extention(x):
 def read_file(f, type_of_file):
     #f is the file to be read
     #type_of_file is the extention of file
+    if os.path.isfile(f):
         content = b""
         with open(f, "rb") as f:
             byte = f.read(1)
@@ -78,7 +79,7 @@ def check_header(msg):
 def config_parser():
       
     configur = ConfigParser() 
-    configur.read('../etc/Roshan-Aditya/roshanaditya.conf')
+    configur.read('/etc/Roshan-Aditya/roshanaditya.conf')
     return configur
 
 def check_credential(headers):

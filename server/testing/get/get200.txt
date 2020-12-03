@@ -958,4 +958,108 @@ Content-Type: text/html
 			color: red;
 		}
 
-		/* selected link
+		/* selected linkHTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 11:56:19 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Friday, 23 Oct, 2020 08:23:39 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected link *HTTP/1.1 200 OK
+Set-Cookie: user=12123; Expires=86400;Secure;HttpOnly;Path=/post;SameSite=Strict;
+Date: Thursday, 12 Nov 2020 11:56:19 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Friday, 23 Oct, 2020 08:23:39 GMT
+ETag: 947b3084e2501ab1fdf441c4f35873d5
+Cache-Control: max-age=10
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected link *

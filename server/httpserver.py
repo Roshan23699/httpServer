@@ -20,7 +20,6 @@ import re
 
 parser = config_parser()
 
-
 def response(client, addr, parser):
     requests = []
     msg = client.recv(1024).decode('utf-8')
@@ -87,7 +86,7 @@ if __name__ == "__main__":
         server_socket.listen(1)
         print("Server is ready to listen")
     except:
-        
+        print("Can not bind to port")
 
 
     while True:

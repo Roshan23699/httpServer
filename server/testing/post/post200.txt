@@ -120,4 +120,65 @@ Content-Type: text/html
 		#notice th {
 			margin-top: 2px;
 			padding-top: 12px;
+	HTTP/1.1 200 OK
+Date: Thursday, 12 Nov 2020 16:10:55 GMT
+Server: Aditya-Roshan/1.0.0 (Cn)
+last-Modified: Thursday, 12 Nov, 2020 03:05:36 GMT
+ETag: "2aa6-59280a1a3740c"
+Accept-Ranges: bytes
+Content-Length: 15238
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		#notice {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		#notice td,
+		#notice th {
+			border-bottom: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#notice tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#notice tr:hover {
+			background-color: #ddd;
+		}
+
+		#notice	a:link {
+			color:rgb(85, 83, 83);
+		}
+
+		/* visited link */
+		#notice a:visited {
+			color:rgb(85, 83, 83);
+		}
+
+		/* mouse over link */
+		#notice a:hover {
+			color: red;
+		}
+
+		/* selected link */
+		#notice	a:active {
+			color: yellow;
+		}
+
+
+
+
+		#notice th {
+			margin-top: 2px;
+			padding-top: 12px;
 	

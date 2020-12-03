@@ -9,7 +9,7 @@ from authorization import CHECK_AUTH
 
 def unauthorized(headers, client, addr, parser):
     path = parser.get('server','DocumentRoot')
-    path += "/error/error.html"
+    path += "/error/unauthorized.html"
     verification_details = parser.get('server','DocumentRoot') + "/post/form.html"
     response = ""
     response += "HTTP/1.1 401 Unauthorized\n"
